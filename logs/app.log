@@ -1,0 +1,16 @@
+2025-12-22 16:42:32,359 [INFO] Passo adicionado: DIGITAR em (-1364, 440): 'google' - Delay: 1.0s
+2025-12-22 16:42:35,785 [INFO] Passo removido: DIGITAR em (-1364, 440): 'google' - Delay: 1.0s
+2025-12-22 16:42:39,156 [INFO] Sequência limpa.
+2025-12-22 16:42:50,686 [INFO] Sequência limpa.
+2025-12-22 16:43:02,310 [INFO] Passo adicionado: CLIQUE LEFT em (-1351, 1318) - Delay: 1.0s
+2025-12-22 16:43:24,535 [INFO] Passo adicionado: DIGITAR em (-1444, 433): 'google' - Delay: 1.0s
+2025-12-22 16:43:26,763 [INFO] Iniciando execução. Loops: 1, Total Passos: 2
+2025-12-22 16:43:26,764 [INFO] Iniciando Loop 1
+2025-12-22 16:43:29,501 [INFO] Execução finalizada.
+2025-12-22 16:45:17,534 [INFO] Passo adicionado: CLIQUE LEFT em (791, 1056) - Delay: 1.0s
+2025-12-22 16:45:33,086 [INFO] Passo adicionado: DIGITAR em (964, 163): 'google' - Delay: 1.0s
+2025-12-22 16:45:39,440 [INFO] Iniciando execução. Loops: 1, Total Passos: 2
+2025-12-22 16:45:39,441 [INFO] Iniciando Loop 1
+2025-12-22 16:45:42,192 [INFO] Execução finalizada.
+2025-12-22 16:45:49,763 [INFO] Passo removido: CLIQUE LEFT em (791, 1056) - Delay: 1.0s
+2025-12-22 16:45:50,770 [INFO] Passo removido: DIGITAR em (964, 163): 'google' - Delay: 1.0s
