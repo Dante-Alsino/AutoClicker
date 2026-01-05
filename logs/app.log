@@ -4499,3 +4499,1677 @@ pyautogui.FailSafeException: PyAutoGUI fail-safe triggered from mouse moving to 
 2025-12-23 16:37:09,632 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
 2025-12-23 16:37:10,842 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
 2025-12-23 16:37:11,547 [INFO] Execução finalizada.
+2025-12-26 12:58:01,879 [INFO] Dados carregados: 56 linhas.
+2025-12-26 12:58:14,566 [INFO] Passo adicionado: DIGITAR em (1798, 520): '' [LIMPAR] - Delay: 0.4s
+2025-12-26 12:58:14,569 [INFO] Passo adicionado: DIGITAR em (1790, 520): (ARQUIVO) - Delay: 0.4s
+2025-12-26 12:58:14,569 [INFO] Passo adicionado: CLIQUE LEFT em (329, 1000) - Delay: 0.4s
+2025-12-26 12:58:14,569 [INFO] Passo adicionado: CLIQUE LEFT em (637, 536) - Delay: 0.4s
+2025-12-26 12:58:14,569 [INFO] Passo adicionado: DIGITAR em (632, 535): '31' - Delay: 0.4s
+2025-12-26 12:58:14,569 [INFO] Passo adicionado: DIGITAR em (653, 535): '12' - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: DIGITAR em (677, 535): '2027' - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: CLIQUE LEFT em (147, 193) - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: DIGITAR em (146, 424): '' [LIMPAR] - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: DIGITAR em (148, 423): '19' - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: CLIQUE LEFT em (148, 557) - Delay: 0.4s
+2025-12-26 12:58:14,570 [INFO] Passo adicionado: DIGITAR em (148, 561): '' [LIMPAR] - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: DIGITAR em (148, 561): '001' - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: CLIQUE LEFT em (457, 560) - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: DIGITAR em (715, 378): '001' - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: CLIQUE LEFT em (1021, 596) - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: CLIQUE LEFT em (383, 739) - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: DIGITAR em (745, 396): '' [LIMPAR] - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: DIGITAR em (745, 396): '02' - Delay: 0.4s
+2025-12-26 12:58:14,571 [INFO] Passo adicionado: CLIQUE LEFT em (1101, 537) - Delay: 0.4s
+2025-12-26 12:58:14,573 [INFO] Passo adicionado: DIGITAR em (1157, 537): '15' - Delay: 0.4s
+2025-12-26 12:58:14,573 [INFO] Passo adicionado: CLIQUE LEFT em (344, 995) - Delay: 0.4s
+2025-12-26 12:58:14,573 [INFO] Sequência carregada de C:/Users/ADM/Desktop/testeClicker/json/BancoBB.json
+2025-12-26 12:59:21,642 [INFO] Passo adicionado: DIGITAR em (1798, 520): '' [LIMPAR] - Delay: 0.3s
+2025-12-26 12:59:21,642 [INFO] Passo adicionado: DIGITAR em (1790, 520): (ARQUIVO) - Delay: 0.3s
+2025-12-26 12:59:21,643 [INFO] Passo adicionado: CLIQUE LEFT em (329, 1000) - Delay: 0.3s
+2025-12-26 12:59:21,643 [INFO] Passo adicionado: CLIQUE LEFT em (637, 536) - Delay: 0.3s
+2025-12-26 12:59:21,643 [INFO] Passo adicionado: DIGITAR em (632, 535): '31' - Delay: 0.3s
+2025-12-26 12:59:21,643 [INFO] Passo adicionado: DIGITAR em (653, 535): '12' - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (677, 535): '2027' - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: CLIQUE LEFT em (147, 193) - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (146, 424): '' [LIMPAR] - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (148, 423): '19' - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: CLIQUE LEFT em (148, 557) - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (148, 561): '' [LIMPAR] - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (148, 561): '001' - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: CLIQUE LEFT em (457, 560) - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: DIGITAR em (715, 378): '001' - Delay: 0.3s
+2025-12-26 12:59:21,644 [INFO] Passo adicionado: CLIQUE LEFT em (1021, 596) - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: CLIQUE LEFT em (383, 739) - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: DIGITAR em (745, 396): '' [LIMPAR] - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: DIGITAR em (745, 396): '02' - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: CLIQUE LEFT em (1101, 537) - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: DIGITAR em (1157, 537): '15' - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Passo adicionado: CLIQUE LEFT em (344, 995) - Delay: 0.3s
+2025-12-26 12:59:21,646 [INFO] Sequência carregada de C:/Users/ADM/Desktop/testeClicker/json/BancoBB.json
+2025-12-26 12:59:55,456 [INFO] Iniciando execução. Loops: 10, Total Passos: 22
+2025-12-26 12:59:55,457 [INFO] Iniciando Loop 1
+2025-12-26 12:59:55,470 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 12:59:55,782 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 12:59:56,594 [INFO] Usando dados da linha 1: '1287'
+2025-12-26 12:59:56,594 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 12:59:57,909 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 12:59:58,515 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 12:59:59,122 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:00:00,233 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:00:01,349 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:00:02,667 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:00:03,275 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:00:03,580 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:04,390 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:00:05,506 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:00:06,114 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:06,420 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:07,230 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:08,447 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:00:09,054 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:00:10,271 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:00:10,884 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:00:11,490 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:11,795 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:12,610 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:13,723 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:00:14,330 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:00:15,442 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:00:16,050 [INFO] Iniciando Loop 2
+2025-12-26 13:00:16,052 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:00:16,355 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:17,169 [INFO] Usando dados da linha 2: '3678'
+2025-12-26 13:00:17,170 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:00:18,487 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:00:19,091 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:00:19,699 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:00:20,811 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:00:21,925 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:00:23,246 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:00:23,854 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:00:24,159 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:24,971 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:00:26,088 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:00:26,696 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:27,002 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:27,815 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:29,030 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:00:29,637 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:00:30,853 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:00:31,460 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:00:32,068 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:32,372 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:33,187 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:34,299 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:00:34,905 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:00:36,020 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:00:36,626 [INFO] Iniciando Loop 3
+2025-12-26 13:00:36,627 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:00:36,931 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:37,740 [INFO] Usando dados da linha 3: '3956'
+2025-12-26 13:00:37,742 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:00:39,061 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:00:39,666 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:00:40,272 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:00:41,388 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:00:42,502 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:00:43,823 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:00:44,430 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:00:44,734 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:45,544 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:00:46,661 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:00:47,267 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:47,574 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:48,386 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:00:49,602 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:00:50,208 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:00:51,421 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:00:52,027 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:00:52,635 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:52,941 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:53,756 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:00:54,869 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:00:55,474 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:00:56,587 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:00:57,192 [INFO] Iniciando Loop 4
+2025-12-26 13:00:57,194 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:00:57,500 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:00:58,312 [INFO] Usando dados da linha 4: '1270'
+2025-12-26 13:00:58,313 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:00:59,632 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:01:00,239 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:01:00,845 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:01:01,961 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:01:03,074 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:01:04,394 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:01:05,001 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:01:05,307 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:01:06,121 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:01:07,236 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:01:07,844 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:01:08,150 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:01:08,961 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:01:10,180 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:01:10,787 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:01:12,007 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:01:12,615 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:01:13,224 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:01:13,530 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:01:14,344 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:01:15,461 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:01:16,067 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:01:16,205 [INFO] Sinal de parada recebido.
+2025-12-26 13:01:17,179 [INFO] Execução interrompida pelo usuário (loop interno).
+2025-12-26 13:01:17,181 [INFO] Execução finalizada.
+2025-12-26 13:02:44,253 [INFO] Dados carregados: 52 linhas.
+2025-12-26 13:03:13,617 [INFO] Iniciando execução. Loops: 10, Total Passos: 22
+2025-12-26 13:03:13,618 [INFO] Iniciando Loop 1
+2025-12-26 13:03:13,623 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:03:13,928 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:14,738 [INFO] Usando dados da linha 1: '1585'
+2025-12-26 13:03:14,740 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:03:16,060 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:03:16,666 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:03:17,273 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:03:18,384 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:03:19,502 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:03:20,826 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:03:21,433 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:03:21,737 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:22,549 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:03:23,662 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:03:24,270 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:03:24,576 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:25,390 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:03:26,606 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:03:27,211 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:03:28,426 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:03:29,033 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:03:29,639 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:03:29,943 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:30,755 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:03:31,868 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:03:32,483 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:03:33,598 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:03:34,204 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:03:35,596 [INFO] Iniciando Loop 2
+2025-12-26 13:03:35,597 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:03:35,908 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:36,719 [INFO] Usando dados da linha 2: '2624'
+2025-12-26 13:03:36,720 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:03:38,040 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:03:38,646 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:03:39,249 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:03:40,362 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:03:41,481 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:03:42,799 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:03:43,406 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:03:43,709 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:44,520 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:03:45,635 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:03:46,244 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:03:46,549 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:47,357 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:03:48,570 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:03:49,178 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:03:50,393 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:03:51,000 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:03:51,608 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:03:51,912 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:52,725 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:03:53,841 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:03:54,447 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:03:55,560 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:03:56,163 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:03:57,520 [INFO] Iniciando Loop 3
+2025-12-26 13:03:57,520 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:03:57,835 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:03:58,644 [INFO] Usando dados da linha 3: '3560'
+2025-12-26 13:03:58,645 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:03:59,967 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:04:00,573 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:04:01,178 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:04:02,289 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:04:03,402 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:04:04,720 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:04:05,327 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:04:05,631 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:06,443 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:04:07,556 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:04:08,162 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:08,467 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:09,279 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:10,498 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:04:11,106 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:04:12,321 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:04:12,926 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:04:13,531 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:13,838 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:14,650 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:15,764 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:04:16,371 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:04:17,484 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:04:18,092 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:04:19,751 [INFO] Iniciando Loop 4
+2025-12-26 13:04:19,753 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:04:20,070 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:20,885 [INFO] Usando dados da linha 4: '3919'
+2025-12-26 13:04:20,885 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:04:22,206 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:04:22,812 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:04:23,417 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:04:24,532 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:04:25,648 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:04:26,971 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:04:27,578 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:04:27,883 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:28,698 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:04:29,811 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:04:30,420 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:30,725 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:31,538 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:32,756 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:04:33,362 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:04:34,580 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:04:35,185 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:04:35,793 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:36,097 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:36,911 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:38,025 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:04:38,633 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:04:39,750 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:04:40,355 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:04:41,487 [INFO] Iniciando Loop 5
+2025-12-26 13:04:41,489 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:04:41,796 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:42,608 [INFO] Usando dados da linha 5: '1966'
+2025-12-26 13:04:42,610 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:04:43,931 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:04:44,539 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:04:45,144 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:04:46,258 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:04:47,372 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:04:48,693 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:04:49,299 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:04:49,605 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:50,418 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:04:51,531 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:04:52,139 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:52,444 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:53,258 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:04:54,476 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:04:55,084 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:04:56,300 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:04:56,904 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:04:57,510 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:57,813 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:04:58,623 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:04:59,736 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:05:00,343 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:05:01,456 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:05:02,062 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:05:03,359 [INFO] Iniciando Loop 6
+2025-12-26 13:05:03,360 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:05:03,672 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:04,484 [INFO] Usando dados da linha 6: '3802'
+2025-12-26 13:05:04,486 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:05:05,804 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:05:06,410 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:05:07,017 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:05:08,132 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:05:09,245 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:05:10,564 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:05:11,170 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:05:11,476 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:12,284 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:05:13,399 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:05:14,005 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:14,309 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:15,123 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:16,342 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:05:16,948 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:05:18,165 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:05:18,771 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:05:19,380 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:05:19,684 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:20,496 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:05:21,610 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:05:22,217 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:05:23,335 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:05:23,941 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:05:24,836 [INFO] Iniciando Loop 7
+2025-12-26 13:05:24,837 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:05:25,151 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:25,964 [INFO] Usando dados da linha 7: '7277'
+2025-12-26 13:05:25,965 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:05:27,285 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:05:27,890 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:05:28,494 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:05:29,610 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:05:30,722 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:05:32,040 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:05:32,648 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:05:32,954 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:33,770 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:05:34,886 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:05:35,493 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:35,798 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:36,610 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:37,827 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:05:38,437 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:05:39,657 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:05:40,264 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:05:40,871 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:05:41,177 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:41,995 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:05:43,112 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:05:43,721 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:05:44,836 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:05:45,443 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:05:46,300 [INFO] Iniciando Loop 8
+2025-12-26 13:05:46,301 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:05:46,614 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:47,428 [INFO] Usando dados da linha 8: '3188'
+2025-12-26 13:05:47,430 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:05:48,758 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:05:49,366 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:05:49,972 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:05:51,087 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:05:52,202 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:05:53,525 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:05:54,132 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:05:54,438 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:55,250 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:05:56,362 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:05:56,968 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:57,273 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:05:58,088 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:05:59,305 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:05:59,913 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:06:01,129 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:06:01,736 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:06:02,343 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:02,649 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:03,466 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:04,584 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:06:05,192 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:06:06,306 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:06:06,911 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:06:08,131 [INFO] Iniciando Loop 9
+2025-12-26 13:06:08,132 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:06:08,447 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:09,257 [INFO] Usando dados da linha 9: '5483'
+2025-12-26 13:06:09,260 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:06:10,579 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:06:11,186 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:06:11,791 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:06:12,904 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:06:14,014 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:06:15,336 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:06:15,944 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:06:16,249 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:17,064 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:06:18,175 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:06:18,781 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:06:19,087 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:19,903 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:06:21,118 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:06:21,728 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:06:22,943 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:06:23,547 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:06:24,154 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:24,460 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:25,273 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:26,387 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:06:26,992 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:06:28,107 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:06:28,714 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:06:29,757 [INFO] Iniciando Loop 10
+2025-12-26 13:06:29,758 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:06:30,073 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:30,884 [INFO] Usando dados da linha 10: '2700'
+2025-12-26 13:06:30,885 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:06:32,202 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:06:32,810 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:06:33,415 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:06:34,528 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:06:35,640 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:06:36,960 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:06:37,568 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:06:37,873 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:38,687 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:06:39,800 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:06:40,407 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:06:40,713 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:41,524 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:06:42,742 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:06:43,349 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:06:44,564 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:06:45,170 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:06:45,777 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:46,082 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:06:46,896 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:06:48,011 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:06:48,618 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:06:49,728 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:06:50,336 [INFO] Execução finalizada.
+2025-12-26 13:07:25,128 [INFO] Dados carregados: 42 linhas.
+2025-12-26 13:07:50,822 [INFO] Iniciando execução. Loops: 42, Total Passos: 22
+2025-12-26 13:07:50,822 [INFO] Iniciando Loop 1
+2025-12-26 13:07:50,825 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:07:51,133 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:07:51,946 [INFO] Usando dados da linha 1: '7628'
+2025-12-26 13:07:51,948 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:07:53,271 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:07:53,877 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:07:54,484 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:07:55,598 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:07:56,708 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:07:58,023 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:07:58,629 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:07:58,934 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:07:59,749 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:08:00,862 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:08:01,469 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:08:01,775 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:08:02,585 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:08:03,804 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:08:04,420 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:08:05,636 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:08:06,243 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:08:06,849 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:08:07,155 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:08:07,967 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:08:09,081 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:08:09,688 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:08:10,800 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:08:11,407 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:09:46,529 [INFO] Iniciando Loop 2
+2025-12-26 13:09:46,530 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:09:46,840 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:09:47,653 [INFO] Usando dados da linha 2: '7'
+2025-12-26 13:09:47,654 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:09:48,669 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:09:49,274 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:09:49,881 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:09:50,994 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:09:52,105 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:09:53,424 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:09:54,031 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:09:54,336 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:09:55,147 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:09:56,256 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:09:56,863 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:09:57,172 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:09:57,982 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:09:59,199 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:09:59,805 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:10:01,021 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:10:01,626 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:10:02,232 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:02,537 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:03,346 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:04,456 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:10:05,064 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:10:06,180 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:10:06,787 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:10:08,852 [INFO] Iniciando Loop 3
+2025-12-26 13:10:08,853 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:10:09,166 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:09,978 [INFO] Usando dados da linha 3: '1349'
+2025-12-26 13:10:09,979 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:10:11,296 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:10:11,905 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:10:12,509 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:10:13,624 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:10:14,739 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:10:16,061 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:10:16,668 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:10:16,975 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:17,786 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:10:18,900 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:10:19,508 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:10:19,813 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:20,628 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:10:21,846 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:10:22,454 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:10:23,673 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:10:24,279 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:10:24,888 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:25,194 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:26,008 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:27,128 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:10:27,734 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:10:28,848 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:10:29,456 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:10:32,550 [INFO] Iniciando Loop 4
+2025-12-26 13:10:32,550 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:10:32,860 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:33,670 [INFO] Usando dados da linha 4: '2209'
+2025-12-26 13:10:33,671 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:10:34,994 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:10:35,601 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:10:36,208 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:10:37,320 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:10:38,433 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:10:39,752 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:10:40,360 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:10:40,666 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:41,479 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:10:42,590 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:10:43,196 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:10:43,501 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:44,312 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:10:45,526 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:10:46,132 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:10:47,345 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:10:47,952 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:10:48,559 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:48,865 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:49,678 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:10:50,793 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:10:51,401 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:10:52,516 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:10:53,124 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:10:54,152 [INFO] Iniciando Loop 5
+2025-12-26 13:10:54,153 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:10:54,470 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:10:55,280 [INFO] Usando dados da linha 5: '2567'
+2025-12-26 13:10:55,282 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:10:56,599 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:10:57,205 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:10:57,814 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:10:58,931 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:11:00,046 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:11:01,365 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:11:01,971 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:11:02,275 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:03,087 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:11:04,199 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:11:04,806 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:05,112 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:05,923 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:07,140 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:11:07,746 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:11:08,961 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:11:09,567 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:11:10,175 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:10,480 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:11,294 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:12,408 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:11:13,016 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:11:14,134 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:11:14,738 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:11:15,825 [INFO] Iniciando Loop 6
+2025-12-26 13:11:15,827 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:11:16,140 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:16,950 [INFO] Usando dados da linha 6: '3115'
+2025-12-26 13:11:16,952 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:11:18,280 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:11:18,886 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:11:19,493 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:11:20,606 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:11:21,721 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:11:23,041 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:11:23,648 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:11:23,954 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:24,768 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:11:25,884 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:11:26,494 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:26,808 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:27,622 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:28,837 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:11:29,445 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:11:30,660 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:11:31,267 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:11:31,876 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:32,180 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:32,994 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:34,108 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:11:34,714 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:11:35,828 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:11:36,435 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:11:37,749 [INFO] Iniciando Loop 7
+2025-12-26 13:11:37,751 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:11:38,066 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:38,877 [INFO] Usando dados da linha 7: '3662'
+2025-12-26 13:11:38,879 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:11:40,198 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:11:40,803 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:11:41,408 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:11:42,523 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:11:43,640 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:11:44,962 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:11:45,570 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:11:45,875 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:46,686 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:11:47,800 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:11:48,407 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:48,713 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:49,524 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:11:50,738 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:11:51,344 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:11:52,563 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:11:53,170 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:11:53,777 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:54,083 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:11:54,899 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:11:56,012 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:11:56,617 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:11:57,728 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:11:58,335 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:11:59,534 [INFO] Iniciando Loop 8
+2025-12-26 13:11:59,535 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:11:59,852 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:00,664 [INFO] Usando dados da linha 8: '3952'
+2025-12-26 13:12:00,667 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:12:01,986 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:12:02,593 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:12:03,200 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:12:04,312 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:12:05,427 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:12:06,747 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:12:07,353 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:12:07,657 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:08,467 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:12:09,582 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:12:10,197 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:10,503 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:11,312 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:12,529 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:12:13,135 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:12:14,352 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:12:14,960 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:12:15,565 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:12:15,868 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:16,677 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:12:17,791 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:12:18,398 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:12:19,511 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:12:20,117 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:12:21,399 [INFO] Iniciando Loop 9
+2025-12-26 13:12:21,400 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:12:21,713 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:22,522 [INFO] Usando dados da linha 9: '5618'
+2025-12-26 13:12:22,524 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:12:23,846 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:12:24,451 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:12:25,058 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:12:26,171 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:12:27,285 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:12:28,609 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:12:29,216 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:12:29,520 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:30,336 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:12:31,454 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:12:32,063 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:32,368 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:33,179 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:34,394 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:12:35,001 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:12:36,214 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:12:36,820 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:12:37,427 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:12:37,732 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:38,542 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:12:39,653 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:12:40,259 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:12:41,372 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:12:41,977 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:12:43,015 [INFO] Iniciando Loop 10
+2025-12-26 13:12:43,015 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:12:43,329 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:44,141 [INFO] Usando dados da linha 10: '5835'
+2025-12-26 13:12:44,143 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:12:45,465 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:12:46,071 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:12:46,678 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:12:47,789 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:12:48,899 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:12:50,223 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:12:50,828 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:12:51,134 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:51,945 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:12:53,058 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:12:53,665 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:53,971 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:12:54,780 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:12:56,001 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:12:56,606 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:12:57,822 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:12:58,427 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:12:59,034 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:12:59,341 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:13:00,153 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:13:01,269 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:13:01,874 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:13:02,988 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:13:03,593 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:13:54,092 [INFO] Iniciando Loop 11
+2025-12-26 13:13:54,092 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:13:54,401 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:13:55,211 [INFO] Usando dados da linha 11: '6097'
+2025-12-26 13:13:55,213 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:13:56,534 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:13:57,139 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:13:57,746 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:13:58,859 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:13:59,972 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:14:01,289 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:14:01,896 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:14:02,201 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:03,013 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:14:04,128 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:14:04,735 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:05,041 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:05,853 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:07,068 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:14:07,673 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:14:08,888 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:14:09,497 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:14:10,102 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:10,409 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:11,224 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:12,338 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:14:12,945 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:14:14,062 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:14:14,668 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:14:16,252 [INFO] Iniciando Loop 12
+2025-12-26 13:14:16,254 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:14:16,568 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:17,377 [INFO] Usando dados da linha 12: '6169'
+2025-12-26 13:14:17,378 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:14:18,696 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:14:19,303 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:14:19,910 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:14:21,021 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:14:22,135 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:14:23,456 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:14:24,064 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:14:24,367 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:25,183 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:14:26,297 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:14:26,906 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:27,212 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:28,025 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:29,240 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:14:29,846 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:14:31,065 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:14:31,671 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:14:32,279 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:32,584 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:33,394 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:34,508 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:14:35,116 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:14:36,230 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:14:36,835 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:14:38,336 [INFO] Iniciando Loop 13
+2025-12-26 13:14:38,336 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:14:38,646 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:39,458 [INFO] Usando dados da linha 13: '6903'
+2025-12-26 13:14:39,458 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:14:40,776 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:14:41,383 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:14:41,990 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:14:43,105 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:14:44,220 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:14:45,540 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:14:46,149 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:14:46,455 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:47,265 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:14:48,379 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:14:48,992 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:49,298 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:50,110 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:14:51,328 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:14:51,937 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:14:53,153 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:14:53,761 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:14:54,367 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:54,673 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:14:55,487 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:14:56,597 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:14:57,202 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:14:58,315 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:14:58,922 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:15:00,755 [INFO] Iniciando Loop 14
+2025-12-26 13:15:00,757 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:15:01,072 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:01,888 [INFO] Usando dados da linha 14: '7407'
+2025-12-26 13:15:01,890 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:15:03,212 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:15:03,818 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:15:04,428 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:15:05,543 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:15:06,652 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:15:07,971 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:15:08,577 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:15:08,882 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:09,694 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:15:10,810 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:15:11,421 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:11,724 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:12,535 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:13,749 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:15:14,355 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:15:15,571 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:15:16,177 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:15:16,785 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:15:17,090 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:17,901 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:15:19,018 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:15:19,624 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:15:20,743 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:15:21,349 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:15:22,921 [INFO] Iniciando Loop 15
+2025-12-26 13:15:22,922 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:15:23,234 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:24,045 [INFO] Usando dados da linha 15: '7418'
+2025-12-26 13:15:24,047 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:15:25,365 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:15:25,973 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:15:26,580 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:15:27,695 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:15:28,809 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:15:30,128 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:15:30,733 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:15:31,038 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:31,849 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:15:32,963 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:15:33,569 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:33,877 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:34,692 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:35,906 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:15:36,514 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:15:37,733 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:15:38,340 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:15:38,946 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:15:39,252 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:40,065 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:15:41,181 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:15:41,791 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:15:42,902 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:15:43,508 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:15:44,904 [INFO] Iniciando Loop 16
+2025-12-26 13:15:44,906 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:15:45,218 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:46,027 [INFO] Usando dados da linha 16: '7964'
+2025-12-26 13:15:46,029 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:15:47,356 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:15:47,963 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:15:48,568 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:15:49,682 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:15:50,795 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:15:52,113 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:15:52,721 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:15:53,028 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:53,841 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:15:54,953 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:15:55,561 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:55,865 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:15:56,676 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:15:57,890 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:15:58,497 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:15:59,712 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:16:00,319 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:16:00,925 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:01,230 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:02,043 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:03,158 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:16:03,764 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:16:04,880 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:16:05,493 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:16:07,452 [INFO] Iniciando Loop 17
+2025-12-26 13:16:07,452 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:16:07,761 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:08,570 [INFO] Usando dados da linha 17: '8671'
+2025-12-26 13:16:08,571 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:16:09,890 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:16:10,500 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:16:11,104 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:16:12,218 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:16:13,331 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:16:14,648 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:16:15,253 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:16:15,560 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:16,372 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:16:17,487 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:16:18,094 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:16:18,398 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:19,211 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:16:20,434 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:16:21,041 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:16:22,259 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:16:22,867 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:16:23,475 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:23,779 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:24,591 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:25,704 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:16:26,311 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:16:27,427 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:16:28,033 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:16:31,572 [INFO] Iniciando Loop 18
+2025-12-26 13:16:31,572 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:16:31,888 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:32,698 [INFO] Usando dados da linha 18: '8898'
+2025-12-26 13:16:32,701 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:16:34,021 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:16:34,628 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:16:35,235 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:16:36,348 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:16:37,461 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:16:38,783 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:16:39,391 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:16:39,695 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:40,508 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:16:41,622 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:16:42,226 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:16:42,532 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:43,344 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:16:44,563 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:16:45,170 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:16:46,386 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:16:46,995 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:16:47,604 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:47,909 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:48,722 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:16:49,836 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:16:50,440 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:16:51,553 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:16:52,159 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:16:53,741 [INFO] Iniciando Loop 19
+2025-12-26 13:16:53,741 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:16:54,056 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:16:54,866 [INFO] Usando dados da linha 19: '2116'
+2025-12-26 13:16:54,867 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:16:56,185 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:16:56,791 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:16:57,396 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:16:58,511 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:16:59,627 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:17:00,943 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:17:01,548 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:17:01,853 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:02,667 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:17:03,781 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:17:04,389 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:17:04,695 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:05,508 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:17:06,724 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:17:07,331 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:17:08,547 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:17:09,154 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:17:09,760 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:17:10,064 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:10,877 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:17:11,988 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:17:12,596 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:17:13,712 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:17:14,316 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:17:15,771 [INFO] Iniciando Loop 20
+2025-12-26 13:17:15,773 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:17:16,084 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:16,896 [INFO] Usando dados da linha 20: '3366'
+2025-12-26 13:17:16,898 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:17:18,213 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:17:18,821 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:17:19,426 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:17:20,539 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:17:21,658 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:17:22,980 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:17:23,586 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:17:23,892 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:24,707 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:17:25,821 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:17:26,429 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:17:26,732 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:27,542 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:17:28,758 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:17:29,365 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:17:30,580 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:17:31,188 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:17:31,796 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:17:32,103 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:17:32,914 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:17:34,028 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:17:34,638 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:17:35,757 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:17:36,361 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:19:33,249 [INFO] Iniciando Loop 21
+2025-12-26 13:19:33,256 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:19:33,569 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:19:34,381 [INFO] Usando dados da linha 21: '3963'
+2025-12-26 13:19:34,383 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:19:35,702 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:19:36,308 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:19:36,914 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:19:38,027 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:19:39,141 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:19:40,460 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:19:41,067 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:19:41,372 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:19:42,185 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:19:43,302 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:19:43,911 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:19:44,217 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:19:45,028 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:19:46,245 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:19:46,850 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:19:48,068 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:19:48,674 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:19:49,280 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:19:49,585 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:19:50,398 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:19:51,514 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:19:52,118 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:19:53,231 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:19:53,838 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:21:01,969 [INFO] Iniciando Loop 22
+2025-12-26 13:21:01,969 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:21:02,286 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:03,095 [INFO] Usando dados da linha 22: '58'
+2025-12-26 13:21:03,097 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:21:04,208 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:21:04,812 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:21:05,417 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:21:06,529 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:21:07,646 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:21:08,963 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:21:09,570 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:21:09,876 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:10,684 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:21:11,798 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:21:12,406 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:21:12,716 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:13,526 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:21:14,740 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:21:15,348 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:21:16,565 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:21:17,173 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:21:17,780 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:21:18,086 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:18,900 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:21:20,016 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:21:20,624 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:21:21,739 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:21:22,345 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:21:27,204 [INFO] Iniciando Loop 23
+2025-12-26 13:21:27,205 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:21:27,515 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:28,326 [INFO] Usando dados da linha 23: '7307'
+2025-12-26 13:21:28,329 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:21:29,653 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:21:30,260 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:21:30,868 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:21:31,982 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:21:33,095 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:21:34,415 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:21:35,021 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:21:35,327 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:36,140 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:21:37,260 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:21:37,867 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:21:38,172 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:38,987 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:21:40,201 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:21:40,809 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:21:42,028 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:21:42,634 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:21:43,241 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:21:43,546 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:44,361 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:21:45,472 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:21:46,076 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:21:47,192 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:21:47,798 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:21:49,432 [INFO] Iniciando Loop 24
+2025-12-26 13:21:49,434 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:21:49,747 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:50,557 [INFO] Usando dados da linha 24: '1259'
+2025-12-26 13:21:50,558 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:21:51,879 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:21:52,486 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:21:53,094 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:21:54,207 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:21:55,318 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:21:56,636 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:21:57,239 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:21:57,545 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:21:58,358 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:21:59,471 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:22:00,079 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:00,385 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:01,195 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:02,413 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:22:03,018 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:22:04,234 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:22:04,840 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:22:05,446 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:05,751 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:06,562 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:07,678 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:22:08,285 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:22:09,399 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:22:10,005 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:22:14,298 [INFO] Iniciando Loop 25
+2025-12-26 13:22:14,299 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:22:14,607 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:15,418 [INFO] Usando dados da linha 25: '3228'
+2025-12-26 13:22:15,419 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:22:16,740 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:22:17,345 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:22:17,950 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:22:19,062 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:22:20,178 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:22:21,500 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:22:22,107 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:22:22,412 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:23,225 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:22:24,338 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:22:24,951 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:25,258 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:26,069 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:27,287 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:22:27,892 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:22:29,107 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:22:29,712 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:22:30,320 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:30,625 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:31,438 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:32,551 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:22:33,157 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:22:34,271 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:22:34,876 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:22:37,831 [INFO] Iniciando Loop 26
+2025-12-26 13:22:37,832 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:22:38,141 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:38,949 [INFO] Usando dados da linha 26: '2979'
+2025-12-26 13:22:38,950 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:22:40,268 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:22:40,873 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:22:41,481 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:22:42,595 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:22:43,711 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:22:45,028 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:22:45,636 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:22:45,941 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:46,755 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:22:47,869 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:22:48,475 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:48,781 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:49,595 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:22:50,812 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:22:51,421 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:22:52,636 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:22:53,241 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:22:53,849 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:54,156 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:22:54,969 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:22:56,083 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:22:56,688 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:22:57,801 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:22:58,407 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:23:00,261 [INFO] Iniciando Loop 27
+2025-12-26 13:23:00,262 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:23:00,578 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:01,388 [INFO] Usando dados da linha 27: '3143'
+2025-12-26 13:23:01,390 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:23:02,715 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:23:03,322 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:23:03,928 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:23:05,048 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:23:06,161 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:23:07,478 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:23:08,085 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:23:08,391 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:09,203 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:23:10,318 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:23:10,925 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:11,230 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:12,043 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:13,262 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:23:13,870 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:23:15,084 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:23:15,694 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:23:16,300 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:23:16,606 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:17,418 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:23:18,531 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:23:19,138 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:23:20,250 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:23:20,857 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:23:23,122 [INFO] Iniciando Loop 28
+2025-12-26 13:23:23,123 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:23:23,437 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:24,248 [INFO] Usando dados da linha 28: '8364'
+2025-12-26 13:23:24,250 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:23:25,571 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:23:26,177 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:23:26,782 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:23:27,897 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:23:29,012 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:23:30,330 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:23:30,937 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:23:31,244 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:32,059 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:23:33,175 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:23:33,784 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:34,091 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:34,904 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:36,121 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:23:36,728 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:23:37,946 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:23:38,553 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:23:39,162 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:23:39,466 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:40,281 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:23:41,394 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:23:42,000 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:23:43,115 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:23:43,720 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:23:45,668 [INFO] Iniciando Loop 29
+2025-12-26 13:23:45,669 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:23:45,981 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:46,791 [INFO] Usando dados da linha 29: '2916'
+2025-12-26 13:23:46,793 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:23:48,112 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:23:48,718 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:23:49,324 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:23:50,437 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:23:51,549 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:23:52,872 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:23:53,481 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:23:53,786 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:54,598 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:23:55,710 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:23:56,316 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:56,620 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:23:57,435 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:23:58,653 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:23:59,262 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:24:00,476 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:24:01,082 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:24:01,690 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:01,995 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:02,809 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:03,921 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:24:04,527 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:24:05,641 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:24:06,246 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:24:09,317 [INFO] Iniciando Loop 30
+2025-12-26 13:24:09,317 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:24:09,631 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:10,441 [INFO] Usando dados da linha 30: '29'
+2025-12-26 13:24:10,442 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:24:11,556 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:24:12,163 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:24:12,768 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:24:13,879 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:24:14,995 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:24:16,317 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:24:16,922 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:24:17,228 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:18,038 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:24:19,153 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:24:19,762 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:24:20,067 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:20,878 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:24:22,096 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:24:22,703 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:24:23,917 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:24:24,524 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:24:25,133 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:25,441 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:26,251 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:27,367 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:24:27,970 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:24:29,083 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:24:29,689 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:24:32,458 [INFO] Iniciando Loop 31
+2025-12-26 13:24:32,463 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:24:32,773 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:33,580 [INFO] Usando dados da linha 31: '3749'
+2025-12-26 13:24:33,581 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:24:34,898 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:24:35,504 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:24:36,108 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:24:37,219 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:24:38,333 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:24:39,652 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:24:40,256 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:24:40,562 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:41,371 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:24:42,482 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:24:43,087 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:24:43,392 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:44,202 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:24:45,414 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:24:46,020 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:24:47,234 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:24:47,840 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:24:48,446 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:48,749 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:49,556 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:24:50,671 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:24:51,277 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:24:52,389 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:24:52,995 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:24:54,324 [INFO] Iniciando Loop 32
+2025-12-26 13:24:54,327 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:24:54,643 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:24:55,453 [INFO] Usando dados da linha 32: '28'
+2025-12-26 13:24:55,453 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:24:56,562 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:24:57,168 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:24:57,773 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:24:58,886 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:24:59,999 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:25:01,315 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:25:01,922 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:25:02,227 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:03,042 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:25:04,152 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:25:04,757 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:05,062 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:05,874 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:07,088 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:25:07,695 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:25:08,911 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:25:09,518 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:25:10,124 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:10,430 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:11,243 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:12,356 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:25:12,963 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:25:14,076 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:25:14,681 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:25:17,190 [INFO] Iniciando Loop 33
+2025-12-26 13:25:17,191 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:25:17,501 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:18,312 [INFO] Usando dados da linha 33: '6668'
+2025-12-26 13:25:18,314 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:25:19,634 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:25:20,242 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:25:20,848 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:25:21,961 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:25:23,077 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:25:24,400 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:25:25,007 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:25:25,313 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:26,126 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:25:27,239 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:25:27,849 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:28,153 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:28,963 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:30,179 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:25:30,787 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:25:32,002 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:25:32,608 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:25:33,214 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:33,520 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:34,330 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:35,444 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:25:36,050 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:25:37,166 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:25:37,772 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:25:40,870 [INFO] Iniciando Loop 34
+2025-12-26 13:25:40,871 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:25:41,187 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:41,996 [INFO] Usando dados da linha 34: '1159'
+2025-12-26 13:25:41,998 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:25:43,314 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:25:43,924 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:25:44,528 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:25:45,642 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:25:46,755 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:25:48,072 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:25:48,680 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:25:48,986 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:49,796 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:25:50,908 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:25:51,516 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:51,823 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:52,637 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:25:53,856 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:25:54,462 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:25:55,676 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:25:56,281 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:25:56,887 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:57,192 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:25:58,003 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:25:59,115 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:25:59,722 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:26:00,837 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:26:01,441 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:26:04,977 [INFO] Iniciando Loop 35
+2025-12-26 13:26:04,979 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:26:05,288 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:06,098 [INFO] Usando dados da linha 35: '3758'
+2025-12-26 13:26:06,099 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:26:07,418 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:26:08,025 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:26:08,630 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:26:09,741 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:26:10,851 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:26:12,171 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:26:12,777 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:26:13,082 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:13,896 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:26:15,011 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:26:15,617 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:26:15,923 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:16,733 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:26:17,948 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:26:18,553 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:26:19,768 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:26:20,373 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:26:20,980 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:26:21,285 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:22,096 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:26:23,212 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:26:23,819 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:26:24,935 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:26:25,540 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:26:27,016 [INFO] Iniciando Loop 36
+2025-12-26 13:26:27,018 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:26:27,333 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:28,143 [INFO] Usando dados da linha 36: '3938'
+2025-12-26 13:26:28,144 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:26:29,466 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:26:30,073 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:26:30,679 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:26:31,799 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:26:32,915 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:26:34,232 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:26:34,837 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:26:35,142 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:35,954 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:26:37,069 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:26:37,677 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:26:37,983 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:38,792 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:26:40,008 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:26:40,617 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:26:41,836 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:26:42,443 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:26:43,051 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:26:43,354 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:44,168 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:26:45,278 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:26:45,885 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:26:46,999 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:26:47,604 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:26:48,995 [INFO] Iniciando Loop 37
+2025-12-26 13:26:48,995 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:26:49,307 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:50,119 [INFO] Usando dados da linha 37: '4729'
+2025-12-26 13:26:50,120 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:26:51,440 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:26:52,047 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:26:52,653 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:26:53,767 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:26:54,881 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:26:56,200 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:26:56,805 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:26:57,111 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:26:57,921 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:26:59,031 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:26:59,638 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:26:59,945 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:00,757 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:27:01,974 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:27:02,581 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:27:03,797 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:27:04,403 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:27:05,008 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:05,316 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:06,130 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:07,243 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:27:07,850 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:27:08,965 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:27:09,570 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:27:10,620 [INFO] Iniciando Loop 38
+2025-12-26 13:27:10,621 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:27:10,937 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:11,746 [INFO] Usando dados da linha 38: '26'
+2025-12-26 13:27:11,748 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:27:12,858 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:27:13,464 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:27:14,069 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:27:15,182 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:27:16,292 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:27:17,604 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:27:18,210 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:27:18,515 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:19,325 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:27:20,439 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:27:21,045 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:27:21,351 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:22,166 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:27:23,382 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:27:23,989 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:27:25,205 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:27:25,812 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:27:26,420 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:26,724 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:27,537 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:28,649 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:27:29,258 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:27:30,370 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:27:30,976 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:27:32,635 [INFO] Iniciando Loop 39
+2025-12-26 13:27:32,635 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:27:32,946 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:33,758 [INFO] Usando dados da linha 39: '20'
+2025-12-26 13:27:33,758 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:27:34,872 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:27:35,479 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:27:36,086 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:27:37,200 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:27:38,316 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:27:39,638 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:27:40,244 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:27:40,550 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:41,360 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:27:42,474 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:27:43,080 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:27:43,387 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:44,198 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:27:45,411 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:27:46,015 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:27:47,231 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:27:47,837 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:27:48,443 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:48,749 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:49,563 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:27:50,674 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:27:51,280 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:27:52,396 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:27:53,003 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:27:53,925 [INFO] Iniciando Loop 40
+2025-12-26 13:27:53,926 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:27:54,240 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:27:55,048 [INFO] Usando dados da linha 40: '4096'
+2025-12-26 13:27:55,049 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:27:56,365 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:27:56,972 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:27:57,577 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:27:58,689 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:27:59,801 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:28:01,118 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:28:01,727 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:28:02,031 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:02,839 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:28:03,954 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:28:04,563 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:28:04,868 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:05,682 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:28:06,897 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:28:07,503 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:28:08,720 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:28:09,327 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:28:09,935 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:28:10,239 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:11,053 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:28:12,165 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:28:12,774 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:28:13,891 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:28:14,497 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:28:15,815 [INFO] Iniciando Loop 41
+2025-12-26 13:28:15,816 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:28:16,126 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:16,934 [INFO] Usando dados da linha 41: '7306'
+2025-12-26 13:28:16,936 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:28:18,253 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:28:18,860 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:28:19,467 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:28:20,578 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:28:21,692 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:28:23,011 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:28:23,620 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:28:23,923 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:24,735 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:28:25,849 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:28:26,462 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:28:26,768 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:27,582 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:28:28,799 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:28:29,405 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:28:30,619 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:28:31,225 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:28:31,833 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:28:32,139 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:28:32,953 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:28:34,069 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:28:34,676 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:28:35,790 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:28:36,398 [INFO] Aguardando confirmação do usuário para próximo loop...
+2025-12-26 13:32:00,109 [INFO] Iniciando Loop 42
+2025-12-26 13:32:00,111 [INFO] Executando ação no ponto (1798, 520) com botão: LEFT
+2025-12-26 13:32:00,428 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:32:01,237 [INFO] Usando dados da linha 42: '6510'
+2025-12-26 13:32:01,239 [INFO] Executando ação no ponto (1790, 520) com botão: LEFT
+2025-12-26 13:32:02,563 [INFO] Executando ação no ponto (329, 1000) com botão: LEFT
+2025-12-26 13:32:03,171 [INFO] Executando ação no ponto (637, 536) com botão: LEFT
+2025-12-26 13:32:03,776 [INFO] Executando ação no ponto (632, 535) com botão: LEFT
+2025-12-26 13:32:04,889 [INFO] Executando ação no ponto (653, 535) com botão: LEFT
+2025-12-26 13:32:06,005 [INFO] Executando ação no ponto (677, 535) com botão: LEFT
+2025-12-26 13:32:07,323 [INFO] Executando ação no ponto (147, 193) com botão: LEFT
+2025-12-26 13:32:07,930 [INFO] Executando ação no ponto (146, 424) com botão: LEFT
+2025-12-26 13:32:08,235 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:32:09,052 [INFO] Executando ação no ponto (148, 423) com botão: LEFT
+2025-12-26 13:32:10,165 [INFO] Executando ação no ponto (148, 557) com botão: LEFT
+2025-12-26 13:32:10,775 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:32:11,082 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:32:11,896 [INFO] Executando ação no ponto (148, 561) com botão: LEFT
+2025-12-26 13:32:13,114 [INFO] Executando ação no ponto (457, 560) com botão: LEFT
+2025-12-26 13:32:13,719 [INFO] Executando ação no ponto (715, 378) com botão: LEFT
+2025-12-26 13:32:14,934 [INFO] Executando ação no ponto (1021, 596) com botão: LEFT
+2025-12-26 13:32:15,539 [INFO] Executando ação no ponto (383, 739) com botão: LEFT
+2025-12-26 13:32:16,145 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:32:16,451 [INFO] Limpando campo (Ctrl+A + Del)...
+2025-12-26 13:32:17,263 [INFO] Executando ação no ponto (745, 396) com botão: LEFT
+2025-12-26 13:32:18,376 [INFO] Executando ação no ponto (1101, 537) com botão: LEFT
+2025-12-26 13:32:18,983 [INFO] Executando ação no ponto (1157, 537) com botão: LEFT
+2025-12-26 13:32:20,097 [INFO] Executando ação no ponto (344, 995) com botão: LEFT
+2025-12-26 13:32:20,703 [INFO] Execução finalizada.
