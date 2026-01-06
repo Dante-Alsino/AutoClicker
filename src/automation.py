@@ -17,13 +17,16 @@ class ClickStep:
     text_content: str = ""
     use_data_file: bool = False # Se True, usa linha do arquivo carregado
     clear_field: bool = False # Se True, envia Ctrl+A + Del antes de digitar
-
-    def __str__(self):
+    
+    def __str__(self) -> str:
+        """Retorna representação string do passo."""
         if self.action_type == 'type':
             src = " (ARQUIVO)" if self.use_data_file else f" '{self.text_content}'"
             clear = " [LIMPAR]" if self.clear_field else ""
             return f"DIGITAR em ({self.x}, {self.y}):{src}{clear} - Delay: {self.delay}s"
-        return f"CLIQUE {self.button.upper()} em ({self.x}, {self.y}) - Delay: {self.delay}s"
+        
+        btn_pt = "ESQUERDO" if self.button == 'left' else "DIREITO" if self.button == 'right' else "MEIO"
+        return f"CLIQUE {btn_pt} em ({self.x}, {self.y}) - Delay: {self.delay}s"
 
 class AutomationEngine:
     """Gerencia a sequência de passos e a execução."""
@@ -34,15 +37,24 @@ class AutomationEngine:
         self.data_lines: List[str] = []
 
     def load_data_file(self, filepath: str) -> int:
-        """Carrega linhas de dados de um arquivo txt. Retorna qtd linhas."""
+        """
+        Carrega linhas de dados de um arquivo txt.
+        Retorna a quantidade de linhas carregadas.
+        Raise Exception se houver erro de leitura.
+        """
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 self.data_lines = [line.strip() for line in f.readlines() if line.strip()]
+            
+            if not self.data_lines:
+                self.logger.warning("Arquivo de dados carregado mas está vazio.")
+            
             self.logger.info(f"Dados carregados: {len(self.data_lines)} linhas.")
             return len(self.data_lines)
         except Exception as e:
             self.logger.error(f"Erro ao carregar arquivo de dados: {e}")
             raise e
+
 
     def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False):
         """Adiciona um novo passo à sequência."""
@@ -51,17 +63,21 @@ class AutomationEngine:
         self.logger.info(f"Passo adicionado: {step}")
         print(f"Passo adicionado: {step}")
 
-    def clear_steps(self):
-        """Limpa toda a sequência."""
+    def clear_steps(self) -> None:
+        """Remove todos os passos da sequência atual."""
         self.steps.clear()
         self.logger.info("Sequência limpa.")
         print("Sequência limpa.")
+
     
     def get_steps(self) -> List[ClickStep]:
         return self.steps
 
-    def remove_step(self, index: int):
-        """Remove o passo no índice especificado."""
+    def remove_step(self, index: int) -> None:
+        """
+        Remove o passo no índice especificado.
+        Registra warning se índice for inválido.
+        """
         if 0 <= index < len(self.steps):
             removed = self.steps.pop(index)
             self.logger.info(f"Passo removido: {removed}")
@@ -69,6 +85,7 @@ class AutomationEngine:
         else:
             self.logger.warning(f"Tentativa de remover índice inválido: {index}")
             print(f"Índice inválido para remoção: {index}")
+
 
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
@@ -183,11 +200,15 @@ class AutomationEngine:
             self.logger.info("Execução finalizada.")
             print("Execução finalizada.")
 
-    def stop(self):
-        """Sinaliza para parar a execução."""
+    def stop(self) -> None:
+        """
+        Sinaliza para parar a execução.
+        A engine irá parar no início do próximo passo ou loop.
+        """
         self.is_running = False
         self.logger.info("Sinal de parada recebido.")
         print("Parando execução...")
+
 
     def save_to_file(self, filepath: str):
         """Salva a sequência atual em um arquivo JSON."""

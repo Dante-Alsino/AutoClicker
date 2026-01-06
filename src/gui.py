@@ -13,6 +13,7 @@ from tkinter import filedialog
 try:
     from .automation import AutomationEngine, ClickStep
     from .widgets import DraggableMarker
+    from .constants import *
 except ImportError:
     if __name__ == "__main__":
         print("ERRO: Este arquivo não deve ser executado diretamente.")
@@ -44,6 +45,10 @@ ctk.set_default_color_theme("blue")
 
 
 class AutoClickerApp(ctk.CTk):
+    """
+    Janela Principal da aplicação AutoClicker.
+    Gerencia a interface gráfica e a interação com o usuário.
+    """
     def __init__(self):
         super().__init__()
 
@@ -104,7 +109,7 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_btn.pack(side="left", padx=5)
         self.opt_action = ctk.CTkOptionMenu(
             self.input_box, 
-            values=["Click Left", "Click Right", "Digitar Texto"],
+            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto"],
             command=self.on_action_change,
             width=120
         )
@@ -127,7 +132,7 @@ class AutoClickerApp(ctk.CTk):
         self.action_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.action_box.pack(pady=5, padx=5, fill="x")
 
-        self.btn_capture = ctk.CTkButton(self.action_box, text="Capturar (3s)", command=self.start_capture_thread, fg_color="orange")
+        self.btn_capture = ctk.CTkButton(self.action_box, text="Capturar (3s)", command=self.start_capture_thread, fg_color=COLOR_CAPTURE)
         self.btn_capture.pack(side="left", padx=5, expand=True, fill="x")
 
         self.btn_add = ctk.CTkButton(self.action_box, text="Adicionar Passo", command=self.add_step)
@@ -137,7 +142,7 @@ class AutoClickerApp(ctk.CTk):
         self.file_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.file_box.pack(pady=5, padx=5, fill="x")
         
-        self.btn_load_data = ctk.CTkButton(self.file_box, text="Carregar Dados (.txt)", command=self.load_data, fg_color="purple", width=120)
+        self.btn_load_data = ctk.CTkButton(self.file_box, text="Carregar Dados (.txt)", command=self.load_data, fg_color=COLOR_LOAD, width=120)
         self.btn_load_data.pack(side="left", padx=5)
         
         self.lbl_data_info = ctk.CTkLabel(self.file_box, text="Dados: 0 linhas", text_color="gray")
@@ -147,13 +152,13 @@ class AutoClickerApp(ctk.CTk):
         self.op_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.op_box.pack(pady=5, padx=5, fill="x")
 
-        self.btn_save = ctk.CTkButton(self.op_box, text="Salvar JSON", command=self.save_sequence, fg_color="green", width=80)
+        self.btn_save = ctk.CTkButton(self.op_box, text="Salvar JSON", command=self.save_sequence, fg_color=COLOR_SUCCESS, width=80)
         self.btn_save.pack(side="left", padx=5, expand=True, fill="x")
 
-        self.btn_load = ctk.CTkButton(self.op_box, text="Carregar JSON", command=self.load_sequence, fg_color="blue", width=80)
+        self.btn_load = ctk.CTkButton(self.op_box, text="Carregar JSON", command=self.load_sequence, fg_color=COLOR_INFO, width=80)
         self.btn_load.pack(side="left", padx=5, expand=True, fill="x")
 
-        self.btn_clear = ctk.CTkButton(self.op_box, text="Limpar Lista", command=self.clear_list, fg_color="gray", width=80)
+        self.btn_clear = ctk.CTkButton(self.op_box, text="Limpar Lista", command=self.clear_list, fg_color=COLOR_GRAY, width=80)
         self.btn_clear.pack(side="left", padx=5, expand=True, fill="x")
 
         self.chk_markers = ctk.CTkCheckBox(self.op_box, text="Marcadores", command=self.toggle_markers)
@@ -167,7 +172,7 @@ class AutoClickerApp(ctk.CTk):
         self.control_frame = ctk.CTkFrame(self)
         self.control_frame.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
 
-        self.btn_execute = ctk.CTkButton(self.control_frame, text="Executar Sequência", command=self.start_execution_thread, fg_color="green")
+        self.btn_execute = ctk.CTkButton(self.control_frame, text="Executar Sequência", command=self.start_execution_thread, fg_color=COLOR_SUCCESS)
         self.btn_execute.pack(side="left", padx=5, pady=10, expand=True, fill="x")
 
         # Opções de Loop (Adicionado na Fase 4)
@@ -190,7 +195,7 @@ class AutoClickerApp(ctk.CTk):
         self.entry_loops.insert(0, "1")
         self.entry_loops.pack(side="left", padx=2)
 
-        self.btn_stop = ctk.CTkButton(self.control_frame, text="PARAR (F9)", command=self.stop_execution, fg_color="red")
+        self.btn_stop = ctk.CTkButton(self.control_frame, text="PARAR (F9)", command=self.stop_execution, fg_color=COLOR_ERROR)
         self.btn_stop.pack(side="left", padx=5, pady=10, expand=True, fill="x")
         
         # Status Bar
@@ -206,14 +211,21 @@ class AutoClickerApp(ctk.CTk):
             self.text_opts_frame.pack_forget()
 
     def load_data(self):
+        """Carrega arquivo de dados para digitação linha a linha."""
         filepath = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
         if filepath:
             try:
+                # Verificação de arquivo vazio antes de carregar
+                if os.path.getsize(filepath) == 0:
+                    self.lbl_status.configure(text=f"Erro: Arquivo vazio!", text_color=COLOR_WARNING)
+                    messagebox.showwarning("Arquivo Vazio", "O arquivo selecionado não contém dados.")
+                    return
+
                 count = self.engine.load_data_file(filepath)
                 self.lbl_data_info.configure(text=f"Dados: {count} linhas")
                 self.lbl_status.configure(text=f"Dados carregados: {filepath.split('/')[-1]}")
             except Exception as e:
-                self.lbl_status.configure(text=f"Erro ao carregar dados: {e}", text_color="red")
+                self.lbl_status.configure(text=f"Erro ao carregar dados: {e}", text_color=COLOR_ERROR)
 
     def toggle_infinite_loop(self):
         if self.chk_infinite.get():
@@ -251,8 +263,15 @@ class AutoClickerApp(ctk.CTk):
                 self.lbl_status.configure(text="Erro: Preencha todos os campos!", text_color="red")
                 return
 
+            # Validação de Coordenadas
+            screen_width, screen_height = pyautogui.size()
             x = int(x_str)
             y = int(y_str)
+            
+            if not (0 <= x <= screen_width and 0 <= y <= screen_height):
+                 if not messagebox.askyesno("Coordenadas Suspeitas", f"As coordenadas ({x}, {y}) parecem estar fora da tela principal ({screen_width}x{screen_height}).\nDeseja adicionar mesmo assim?"):
+                     return
+
             delay = float(delay_str)
             action_choice = self.opt_action.get()
             
@@ -263,11 +282,12 @@ class AutoClickerApp(ctk.CTk):
             use_data_file = False
             clear_field = False
             
-            if action_choice == "Click Left":
+            if action_choice == "Clique Esquerdo":
                 button = "left"
-            elif action_choice == "Click Right":
+            elif action_choice == "Clique Direito":
                 button = "right"
             elif action_choice == "Digitar Texto":
+
                 action_type = "type"
                 text_content = self.entry_text.get()
                 use_data_file = bool(self.chk_use_file.get())
@@ -277,7 +297,7 @@ class AutoClickerApp(ctk.CTk):
             self._refresh_list()
             self.lbl_status.configure(text="Passo adicionado.", text_color="white")
         except ValueError:
-            self.lbl_status.configure(text="Erro: Valores inválidos (digite apenas números).", text_color="red")
+            self.lbl_status.configure(text="Erro: Valores inválidos (digite apenas números).", text_color=COLOR_ERROR)
 
     def _refresh_list(self):
         # Limpa markers antigos
