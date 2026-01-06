@@ -53,11 +53,13 @@ class AutoClickerApp(ctk.CTk):
         super().__init__()
 
         self.title("AutoClicker Modular")
-        self.geometry("600x530") # Aumentado um pouco para caber novos botoes
+        self.title("AutoClicker Modular")
+        self.geometry(WINDOW_SIZE)
         
         self.engine = AutomationEngine()
         self.markers = []
         self.markers_visible = False
+        self.appearance_mode = "Dark" # Estado atual do tema
         
         # Filas para thread safety
         self.confirm_request_queue = queue.Queue()
@@ -73,6 +75,8 @@ class AutoClickerApp(ctk.CTk):
     def _setup_hotkeys(self):
         try:
             keyboard.add_hotkey('F9', self.stop_execution)
+            keyboard.add_hotkey('p', self.toggle_pause) 
+            keyboard.add_hotkey('P', self.toggle_pause)
         except ImportError:
             print("Biblioteca keyboard não encontrada ou sem permissão.")
 
@@ -80,6 +84,9 @@ class AutoClickerApp(ctk.CTk):
         # Frame de Configuração (Inputs)
         self.config_frame = ctk.CTkFrame(self)
         self.config_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
+
+        # Botão de Tema (Canto Superior) - REMOVIDO DAQUI
+        # self.btn_theme...
         
         # Inputs HBox
         self.input_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
@@ -202,6 +209,10 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_status = ctk.CTkLabel(self, text="Pronto.")
         self.lbl_status.grid(row=3, column=0, sticky="w", padx=10, pady=5)
 
+        # Botão de Tema (Canto Inferior Direito)
+        self.btn_theme = ctk.CTkButton(self, text="Tema: Dark", command=self.toggle_theme, width=80, height=24, fg_color=COLOR_GRAY)
+        self.btn_theme.grid(row=3, column=0, sticky="e", padx=10, pady=5)
+
     def on_action_change(self, choice):
         if choice == "Digitar Texto":
             self.entry_text.pack(side="left", padx=5)
@@ -232,6 +243,86 @@ class AutoClickerApp(ctk.CTk):
             self.entry_loops.configure(state="disabled")
         else:
             self.entry_loops.configure(state="normal")
+    
+    def toggle_theme(self):
+        if self.appearance_mode == "Dark":
+            ctk.set_appearance_mode("Light")
+            self.appearance_mode = "Light"
+            self.btn_theme.configure(text="Tema: Light")
+        else:
+            ctk.set_appearance_mode("Dark")
+            self.appearance_mode = "Dark"
+            self.btn_theme.configure(text="Tema: Dark")
+
+    def toggle_pause(self):
+        if self.engine.is_running:
+            self.engine.toggle_pause()
+            # Atualização visual será feita via callback
+    
+    def _update_state_visuals(self, status_code: int):
+        """Atualiza visual da janela baseado no estado (Pausa/Wait)."""
+        if status_code == -2: # PAUSED
+            self.configure(fg_color=COLOR_PAUSED)
+            self.lbl_status.configure(text="PAUSADO (Pressione P para continuar)", text_color="black")
+        elif status_code == -3: # WAITING
+            self.configure(fg_color=COLOR_WAITING)
+        else: # NORMAL (Reseta para cor do tema)
+            # Hack para resetar cor de fundo do CTK (usando None ou re-setando mode as vezes não limpa borders)
+            # Vamos apenas resetar para o padrão cinza escuro/claro do CTK se possível, mas CTK não expõe fácil
+            # Alternativa: setar para transparent ou cor padrão manual
+            bg = "gray10" if self.appearance_mode == "Dark" else "gray90"
+            self.configure(fg_color=bg)
+
+    def move_step_up(self, index):
+        if index > 0:
+            self.engine.swap_steps(index, index - 1)
+            self._refresh_list()
+            self.highlight_step(index - 1) # Mantém foco visual
+
+    def move_step_down(self, index):
+        if index < len(self.engine.steps) - 1:
+            self.engine.swap_steps(index, index + 1)
+            self._refresh_list()
+            self.highlight_step(index + 1)
+
+    def edit_step(self, index):
+        """Abre dialogo simples para editar passo."""
+        step = self.engine.steps[index]
+        
+        # Cria Janela TopLevel
+        dialog = ctk.CTkToplevel(self)
+        dialog.title(f"Editar Passo {index+1}")
+        dialog.geometry("300x250")
+        dialog.attributes("-topmost", True)
+        
+        ctk.CTkLabel(dialog, text="X:").pack(pady=5)
+        entry_x = ctk.CTkEntry(dialog)
+        entry_x.insert(0, str(step.x))
+        entry_x.pack(pady=5)
+        
+        ctk.CTkLabel(dialog, text="Y:").pack(pady=5)
+        entry_y = ctk.CTkEntry(dialog)
+        entry_y.insert(0, str(step.y))
+        entry_y.pack(pady=5)
+        
+        ctk.CTkLabel(dialog, text="Delay (s):").pack(pady=5)
+        entry_delay = ctk.CTkEntry(dialog)
+        entry_delay.insert(0, str(step.delay))
+        entry_delay.pack(pady=5)
+        
+        def save():
+            try:
+                step.x = int(entry_x.get())
+                step.y = int(entry_y.get())
+                step.delay = float(entry_delay.get())
+                self.engine.update_step(index, step)
+                self._refresh_list()
+                dialog.destroy()
+            except ValueError:
+                messagebox.showerror("Erro", "Valores inválidos.")
+
+        ctk.CTkButton(dialog, text="Salvar", command=save, fg_color=COLOR_SUCCESS).pack(pady=20)
+
 
     def start_capture_thread(self):
         """Inicia a captura em uma thread separada para não travar a GUI."""
@@ -312,7 +403,6 @@ class AutoClickerApp(ctk.CTk):
         for i, step in enumerate(self.engine.steps):
             # Cria markers se checkbox ativo
             if self.markers_visible:
-                # O master do marker pode ser o self (root)
                 m = DraggableMarker(self, i, step.x, step.y, self.on_marker_move)
                 self.markers.append(m)
             
@@ -321,11 +411,21 @@ class AutoClickerApp(ctk.CTk):
             item_frame.pack(fill="x", pady=2)
             self.step_frames.append(item_frame)
             
+            # Controles de Reordenação (Esquerda)
+            reorder_box = ctk.CTkFrame(item_frame, fg_color="transparent")
+            reorder_box.pack(side="left", padx=2)
+            
+            btn_up = ctk.CTkButton(reorder_box, text="↑", width=25, height=20, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_up(idx))
+            btn_up.pack(pady=1)
+            btn_down = ctk.CTkButton(reorder_box, text="↓", width=25, height=20, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_down(idx))
+            btn_down.pack(pady=1)
+            
             # Label do passo
-            # Se for type com clear, mostra o [LIMPAR]
-            # Como atualizamos o __str__ no backend, isso deve aparecer automático
             lbl = ctk.CTkLabel(item_frame, text=f"{i+1}. {step}", anchor="w")
             lbl.pack(side="left", fill="x", expand=True, padx=5)
+            
+            # Binding para Double Click (Editar)
+            lbl.bind("<Double-Button-1>", lambda event, idx=i: self.edit_step(idx))
             
             # Botão de Remover (X)
             btn_remove = ctk.CTkButton(
@@ -358,7 +458,26 @@ class AutoClickerApp(ctk.CTk):
             self._refresh_list()
 
     def highlight_step(self, index):
-        """Destaca o passo em execução."""
+        """
+        Destaca o passo em execução ou atualiza estado visual.
+        index >= 0: Highlight normal.
+        index < 0: Códigos de status (-1=Fim, -2=Pause, -3=Wait).
+        """
+        if index < 0:
+            if index == -1: # Fim / Reset
+                 self._update_state_visuals(0) # 0 = Normal
+            else:
+                 self._update_state_visuals(index)
+            # Remove highlight de list items se pausou/parou
+            if index == -1: 
+                for frame in self.step_frames:
+                    try: frame.configure(fg_color="transparent")
+                    except: pass
+            return
+
+        # Se estamos aqui, é um passo normal rodando (resetamos visual de pausa se houver)
+        self._update_state_visuals(0)
+
         # Reseta cor de todos
         for frame in self.step_frames:
             try:

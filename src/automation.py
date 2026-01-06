@@ -33,6 +33,7 @@ class AutomationEngine:
     def __init__(self):
         self.steps: List[ClickStep] = []
         self.is_running = False
+        self.is_paused = False
         self.logger = logging.getLogger(__name__)
         self.data_lines: List[str] = []
 
@@ -86,6 +87,26 @@ class AutomationEngine:
             self.logger.warning(f"Tentativa de remover índice inválido: {index}")
             print(f"Índice inválido para remoção: {index}")
 
+    def swap_steps(self, index1: int, index2: int) -> None:
+        """Troca dois passos de posição (para reordenação)."""
+        if 0 <= index1 < len(self.steps) and 0 <= index2 < len(self.steps):
+            self.steps[index1], self.steps[index2] = self.steps[index2], self.steps[index1]
+            self.logger.info(f"Passos trocados: {index1} <-> {index2}")
+
+    def update_step(self, index: int, new_step: ClickStep) -> None:
+        """Atualiza um passo existente."""
+        if 0 <= index < len(self.steps):
+            self.steps[index] = new_step
+            self.logger.info(f"Passo {index} atualizado: {new_step}")
+
+    def toggle_pause(self):
+        """Alterna entre pausado e rodando."""
+        self.is_paused = not self.is_paused
+        state = "PAUSADO" if self.is_paused else "RETOMANDO"
+        self.logger.info(f"Estado alterado para: {state}")
+        print(f"--- {state} ---")
+
+
 
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
@@ -111,8 +132,15 @@ class AutomationEngine:
                 if not infinite and current_loop >= loops:
                     break
                 
+                # Pausa
+                while self.is_paused and self.is_running:
+                     time.sleep(0.1)
+                     if on_step_callback:
+                         on_step_callback(-2) # -2 = Código para status PAUSADO (simbolico)
+
                 # Confirmação entre loops (exceto o primeiro)
                 if current_loop > 0 and confirm_between_loops and confirm_callback:
+                    if on_step_callback: on_step_callback(-3) # -3 = WAITING/CONFIRM
                     self.logger.info("Aguardando confirmação do usuário para próximo loop...")
                     should_continue = confirm_callback(current_loop + 1)
                     if not should_continue:
@@ -127,6 +155,12 @@ class AutomationEngine:
                     if not self.is_running:
                         self.logger.info("Execução interrompida pelo usuário (loop interno).")
                         break
+                    
+                    # Checagem de pausa dentro do loop de passos
+                    while self.is_paused and self.is_running:
+                        time.sleep(0.1)
+                        if on_step_callback: on_step_callback(-2)
+
                     
                     # Notifica a interface sobre o passo atual
                     if on_step_callback:
