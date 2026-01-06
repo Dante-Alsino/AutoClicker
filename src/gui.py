@@ -75,8 +75,7 @@ class AutoClickerApp(ctk.CTk):
     def _setup_hotkeys(self):
         try:
             keyboard.add_hotkey('F9', self.stop_execution)
-            keyboard.add_hotkey('p', self.toggle_pause) 
-            keyboard.add_hotkey('P', self.toggle_pause)
+            keyboard.add_hotkey('F8', self.toggle_pause) 
         except ImportError:
             print("Biblioteca keyboard não encontrada ou sem permissão.")
 
@@ -263,7 +262,7 @@ class AutoClickerApp(ctk.CTk):
         """Atualiza visual da janela baseado no estado (Pausa/Wait)."""
         if status_code == -2: # PAUSED
             self.configure(fg_color=COLOR_PAUSED)
-            self.lbl_status.configure(text="PAUSADO (Pressione P para continuar)", text_color="black")
+            self.lbl_status.configure(text="PAUSADO (Pressione F8 para continuar)", text_color="black")
         elif status_code == -3: # WAITING
             self.configure(fg_color=COLOR_WAITING)
         else: # NORMAL (Reseta para cor do tema)
