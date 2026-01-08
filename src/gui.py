@@ -84,9 +84,16 @@ class AutoClickerApp(ctk.CTk):
         self.config_frame = ctk.CTkFrame(self)
         self.config_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
 
-        # Botão de Tema (Canto Superior) - REMOVIDO DAQUI
-        # self.btn_theme...
+        self._build_input_area()
+        self._build_action_buttons()
+        self._build_file_operations()
         
+        # Lista e Controles
+        self._build_list_area()
+        self._build_controls()
+        self._build_status_footer()
+
+    def _build_input_area(self):
         # Inputs HBox
         self.input_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.input_box.pack(pady=5, padx=5, fill="x")
@@ -120,13 +127,16 @@ class AutoClickerApp(ctk.CTk):
             width=120
         )
         self.opt_action.pack(side="left", padx=5)
+        
+        # Checkbox Duplo Clique
+        self.chk_double_click = ctk.CTkCheckBox(self.input_box, text="Duplo Clique", width=60)
+        self.chk_double_click.pack(side="left", padx=5)
 
         # Campo de Texto
         self.entry_text = ctk.CTkEntry(self.input_box, placeholder_text="Texto...", width=120)
         
         # Checkboxes para Texto
         self.text_opts_frame = ctk.CTkFrame(self.input_box, fg_color="transparent")
-        # Será mostrado apenas quando Digitar Texto
         
         self.chk_use_file = ctk.CTkCheckBox(self.text_opts_frame, text="Usar Arq.", width=60)
         self.chk_use_file.pack(side="left", padx=2)
@@ -134,6 +144,7 @@ class AutoClickerApp(ctk.CTk):
         self.chk_clear_field = ctk.CTkCheckBox(self.text_opts_frame, text="Limpar", width=60)
         self.chk_clear_field.pack(side="left", padx=2)
 
+    def _build_action_buttons(self):
         # Actions Box
         self.action_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.action_box.pack(pady=5, padx=5, fill="x")
@@ -144,6 +155,7 @@ class AutoClickerApp(ctk.CTk):
         self.btn_add = ctk.CTkButton(self.action_box, text="Adicionar Passo", command=self.add_step)
         self.btn_add.pack(side="left", padx=5, expand=True, fill="x")
 
+    def _build_file_operations(self):
         # Data & File Box
         self.file_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.file_box.pack(pady=5, padx=5, fill="x")
@@ -170,10 +182,12 @@ class AutoClickerApp(ctk.CTk):
         self.chk_markers = ctk.CTkCheckBox(self.op_box, text="Marcadores", command=self.toggle_markers)
         self.chk_markers.pack(side="right", padx=5)
 
+    def _build_list_area(self):
         # Lista de Passos
         self.list_frame = ctk.CTkScrollableFrame(self, label_text="Sequência de Passos")
         self.list_frame.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="nsew")
-        
+
+    def _build_controls(self):
         # Controles de Execução
         self.control_frame = ctk.CTkFrame(self)
         self.control_frame.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
@@ -181,7 +195,7 @@ class AutoClickerApp(ctk.CTk):
         self.btn_execute = ctk.CTkButton(self.control_frame, text="Executar Sequência", command=self.start_execution_thread, fg_color=COLOR_SUCCESS)
         self.btn_execute.pack(side="left", padx=5, pady=10, expand=True, fill="x")
 
-        # Opções de Loop (Adicionado na Fase 4)
+        # Opções de Loop
         self.loop_frame = ctk.CTkFrame(self.control_frame, fg_color="transparent")
         self.loop_frame.pack(side="left", padx=5)
 
@@ -203,7 +217,8 @@ class AutoClickerApp(ctk.CTk):
 
         self.btn_stop = ctk.CTkButton(self.control_frame, text="PARAR (F9)", command=self.stop_execution, fg_color=COLOR_ERROR)
         self.btn_stop.pack(side="left", padx=5, pady=10, expand=True, fill="x")
-        
+
+    def _build_status_footer(self):
         # Status Bar
         self.lbl_status = ctk.CTkLabel(self, text="Pronto.")
         self.lbl_status.grid(row=3, column=0, sticky="w", padx=10, pady=5)
@@ -211,14 +226,71 @@ class AutoClickerApp(ctk.CTk):
         # Botão de Tema (Canto Inferior Direito)
         self.btn_theme = ctk.CTkButton(self, text="Tema: Dark", command=self.toggle_theme, width=80, height=24, fg_color=COLOR_GRAY)
         self.btn_theme.grid(row=3, column=0, sticky="e", padx=10, pady=5)
+        
+        # Botão de Ajuda (Ao lado do tema)
+        self.btn_help = ctk.CTkButton(self, text="Como funciona", command=self.show_help_window, width=80, height=24, fg_color=COLOR_INFO)
+        self.btn_help.grid(row=3, column=0, sticky="e", padx=100, pady=5)
+
+    def show_help_window(self):
+        """Abre janela com instruções."""
+        help_window = ctk.CTkToplevel(self)
+        help_window.title("Como funciona")
+        help_window.geometry("500x400")
+        help_window.attributes("-topmost", True)
+        
+        textbox = ctk.CTkTextbox(help_window, width=480, height=380)
+        textbox.pack(padx=10, pady=10)
+        
+        help_text = """MANUAL DO AUTOCLICKER MODULAR
+
+1. ADICIONANDO AÇÕES
+--------------------
+   - Coordenadas (X, Y): Digite manualmente ou use o botão "Capturar (3s)".
+   - Capturar: Clique, leve o mouse ao alvo e espere 3 segundos.
+   - Ação: Escolha entre Clique (Esq/Dir) ou Digitar Texto.
+   - Duplo Clique: Marque a caixa para realizar dois cliques rápidos.
+   - Adicionar: Clique em "Adicionar Passo" para inserir na lista.
+
+2. GERENCIANDO A LISTA
+----------------------
+   - Reordenar: Use as setas (▲/▼) para mover passos para cima ou baixo.
+   - Editar: Dê DUPLO CLIQUE em qualquer item da lista para alterar valores.
+   - Excluir: Clique no botão (X) vermelho.
+   - Marcadores: Ative a caixa "Marcadores" para ver pontos visuais na tela.
+
+3. DIGITAÇÃO DE TEXTO
+---------------------
+   - Texto Simples: Digite o texto no campo e adicione o passo.
+   - Usar Arquivo (.txt): Marque "Usar Arq." e carregue um arquivo .txt.
+     Cada vez que o passo rodar, ele pegará a próxima linha do arquivo.
+   - Limpar Campo: Marque "Limpar" para apagar o conteúdo atual antes de digitar (Ctrl+A + Del).
+
+4. EXECUÇÃO E CONTROLE
+----------------------
+   - Iniciar: Clique em "Executar Sequência".
+   - PAUSAR (F8): Pressione F8 para pausar. A borda fica Laranja.
+   - RETOMAR (F8): Pressione F8 novamente para continuar.
+   - PARAR (F9): Pressione F9 para abortar imediatamente (Emergência).
+   - Loops: Defina a quantidade ou marque "Loop Infinito".
+   - Confirmar: Se marcado, pede permissão para iniciar cada novo loop.
+
+5. OUTROS
+---------
+   - Salvar/Carregar: Salve suas rotinas em JSON para não perder trabalho.
+   - Tema: Alterne entre modo Claro e Escuro no botão inferior.
+"""
+        textbox.insert("0.0", help_text)
+        textbox.configure(state="disabled")
 
     def on_action_change(self, choice):
         if choice == "Digitar Texto":
             self.entry_text.pack(side="left", padx=5)
             self.text_opts_frame.pack(side="left", padx=5)
+            self.chk_double_click.pack_forget()
         else:
             self.entry_text.pack_forget()
             self.text_opts_frame.pack_forget()
+            self.chk_double_click.pack(side="left", padx=5)
 
     def load_data(self):
         """Carrega arquivo de dados para digitação linha a linha."""
@@ -309,11 +381,20 @@ class AutoClickerApp(ctk.CTk):
         entry_delay.insert(0, str(step.delay))
         entry_delay.pack(pady=5)
         
+        chk_double = ctk.CTkCheckBox(dialog, text="Duplo Clique")
+        if step.double_click: 
+            chk_double.select()
+        
+        # Só mostra checkbox de duplo clique se for ação de clique
+        if step.action_type == 'click':
+            chk_double.pack(pady=5)
+        
         def save():
             try:
                 step.x = int(entry_x.get())
                 step.y = int(entry_y.get())
                 step.delay = float(entry_delay.get())
+                step.double_click = bool(chk_double.get())
                 self.engine.update_step(index, step)
                 self._refresh_list()
                 dialog.destroy()
@@ -371,11 +452,14 @@ class AutoClickerApp(ctk.CTk):
             text_content = ""
             use_data_file = False
             clear_field = False
+            double_click = False
             
             if action_choice == "Clique Esquerdo":
                 button = "left"
+                double_click = bool(self.chk_double_click.get())
             elif action_choice == "Clique Direito":
                 button = "right"
+                double_click = bool(self.chk_double_click.get())
             elif action_choice == "Digitar Texto":
 
                 action_type = "type"
@@ -383,7 +467,8 @@ class AutoClickerApp(ctk.CTk):
                 use_data_file = bool(self.chk_use_file.get())
                 clear_field = bool(self.chk_clear_field.get())
 
-            self.engine.add_step(x, y, delay, button, action_type, text_content, use_data_file, clear_field)
+
+            self.engine.add_step(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click)
             self._refresh_list()
             self.lbl_status.configure(text="Passo adicionado.", text_color="white")
         except ValueError:
@@ -414,10 +499,10 @@ class AutoClickerApp(ctk.CTk):
             reorder_box = ctk.CTkFrame(item_frame, fg_color="transparent")
             reorder_box.pack(side="left", padx=2)
             
-            btn_up = ctk.CTkButton(reorder_box, text="↑", width=25, height=20, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_up(idx))
-            btn_up.pack(pady=1)
-            btn_down = ctk.CTkButton(reorder_box, text="↓", width=25, height=20, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_down(idx))
-            btn_down.pack(pady=1)
+            btn_up = ctk.CTkButton(reorder_box, text="▲", width=25, height=25, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_up(idx))
+            btn_up.pack(side="left", padx=1)
+            btn_down = ctk.CTkButton(reorder_box, text="▼", width=25, height=25, fg_color=COLOR_GRAY, command=lambda idx=i: self.move_step_down(idx))
+            btn_down.pack(side="left", padx=1)
             
             # Label do passo
             lbl = ctk.CTkLabel(item_frame, text=f"{i+1}. {step}", anchor="w")

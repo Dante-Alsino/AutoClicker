@@ -5,6 +5,13 @@ import json
 import logging
 import os
 from typing import List, Literal, Optional
+try:
+    from .constants import MOUSE_DURATION, KEY_DELAY, ACTION_DELAY
+except ImportError:
+    # Fallback caso não consiga importar (embora o try global no main deva resolver)
+    MOUSE_DURATION = 0.1
+    KEY_DELAY = 0.1
+    ACTION_DELAY = 0.1
 
 @dataclasses.dataclass
 class ClickStep:
@@ -17,6 +24,7 @@ class ClickStep:
     text_content: str = ""
     use_data_file: bool = False # Se True, usa linha do arquivo carregado
     clear_field: bool = False # Se True, envia Ctrl+A + Del antes de digitar
+    double_click: bool = False # Se True, realiza clique duplo
     
     def __str__(self) -> str:
         """Retorna representação string do passo."""
@@ -26,7 +34,8 @@ class ClickStep:
             return f"DIGITAR em ({self.x}, {self.y}):{src}{clear} - Delay: {self.delay}s"
         
         btn_pt = "ESQUERDO" if self.button == 'left' else "DIREITO" if self.button == 'right' else "MEIO"
-        return f"CLIQUE {btn_pt} em ({self.x}, {self.y}) - Delay: {self.delay}s"
+        click_type = " (DUPLO)" if self.double_click else ""
+        return f"CLIQUE {btn_pt}{click_type} em ({self.x}, {self.y}) - Delay: {self.delay}s"
 
 class AutomationEngine:
     """Gerencia a sequência de passos e a execução."""
@@ -57,9 +66,9 @@ class AutomationEngine:
             raise e
 
 
-    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False):
+    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False, double_click: bool = False):
         """Adiciona um novo passo à sequência."""
-        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field) # type: ignore
+        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click) # type: ignore
         self.steps.append(step)
         self.logger.info(f"Passo adicionado: {step}")
         print(f"Passo adicionado: {step}")
@@ -107,6 +116,45 @@ class AutomationEngine:
         print(f"--- {state} ---")
 
 
+
+
+    def _execute_click(self, step: ClickStep):
+        """Executa a ação de clique do passo."""
+        btn = step.button if step.action_type == 'click' else 'left'
+        self.logger.info(f"Executando ação no ponto ({step.x}, {step.y}) com botão: {btn.upper()}")
+        
+        # Garante movimento antes do clique
+        pyautogui.moveTo(step.x, step.y)
+        
+        # Pequeno delay para garantir que o mouse "assentou"
+        time.sleep(ACTION_DELAY)
+        
+        if step.double_click and step.action_type == 'click':
+                self.logger.info("Realizando clique duplo.")
+                pyautogui.doubleClick(button=btn) 
+        else:
+            # Usa duration para segurar o clique por alguns milissegundos
+            if btn == 'right':
+                pyautogui.rightClick(duration=MOUSE_DURATION)
+            elif btn == 'middle':
+                pyautogui.middleClick(duration=MOUSE_DURATION)
+            else:
+                pyautogui.click(duration=MOUSE_DURATION)
+
+    def _execute_type(self, step: ClickStep, text_to_type: str):
+        """Executa a ação de digitar texto."""
+        # Limpar campo antes de digitar?
+        time.sleep(ACTION_DELAY)
+        if step.clear_field:
+            self.logger.info("Limpando campo (Ctrl+A + Del)...")
+            pyautogui.hotkey('ctrl', 'a')
+            time.sleep(ACTION_DELAY)
+            pyautogui.press('del')
+            time.sleep(ACTION_DELAY)
+
+        if text_to_type:
+            time.sleep(ACTION_DELAY) # Delay antes de digitar
+            pyautogui.write(text_to_type, interval=KEY_DELAY) 
 
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
@@ -181,38 +229,15 @@ class AutomationEngine:
                     print(f"Executando passo {i+1}: {step}")
                     
                     # Move e Clica
+                    print(f"Executando passo {i+1}: {step}")
+                    
                     try:
-                        btn = step.button if step.action_type == 'click' else 'left'
-                        self.logger.info(f"Executando ação no ponto ({step.x}, {step.y}) com botão: {btn.upper()}")
+                        # Verifica e executa clique/movimento
+                        self._execute_click(step)
                         
-                        # Garante movimento antes do clique
-                        pyautogui.moveTo(step.x, step.y)
-                        
-                        # Pequeno delay para garantir que o mouse "assentou"
-                        time.sleep(0.1)
-                        
-                        # Usa duration para segurar o clique por alguns milissegundos (simula humano)
-                        if btn == 'right':
-                            pyautogui.rightClick(duration=0.1)
-                        elif btn == 'middle':
-                            pyautogui.middleClick(duration=0.1)
-                        else:
-                            pyautogui.click(duration=0.1)
-                        
-                        # Se for ação de digitar, escreve o texto
+                        # Se for ação de digitar, chama o método específico
                         if step.action_type == 'type':
-                            # Limpar campo antes de digitar?
-                            if step.clear_field:
-                                self.logger.info("Limpando campo (Ctrl+A + Del)...")
-                                time.sleep(0.1)
-                                pyautogui.hotkey('ctrl', 'a')
-                                time.sleep(0.1)
-                                pyautogui.press('del')
-                                time.sleep(0.1)
-
-                            if text_to_type:
-                                time.sleep(0.2) # Aumentado delay antes de digitar
-                                pyautogui.write(text_to_type, interval=0.1) # Digitação mais lenta
+                             self._execute_type(step, text_to_type)
                             
                     except Exception as e:
                         self.logger.error(f"Erro ao executar ação PyAutoGUI no passo {i+1}: {e}")
@@ -270,6 +295,7 @@ class AutomationEngine:
                 text = item.get('text_content', '')
                 use_file = item.get('use_data_file', False) # Default False para retrocompatibilidade
                 clear = item.get('clear_field', False)
+                double = item.get('double_click', False)
                 
                 self.add_step(
                     x=int(item['x']),
@@ -279,7 +305,8 @@ class AutomationEngine:
                     action_type=str(action),
                     text_content=str(text),
                     use_data_file=bool(use_file),
-                    clear_field=bool(clear)
+                    clear_field=bool(clear),
+                    double_click=bool(double)
                 )
             self.logger.info(f"Sequência carregada de {filepath}")
             print(f"Sequência carregada de {filepath}")
