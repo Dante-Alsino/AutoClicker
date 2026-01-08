@@ -122,7 +122,7 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_btn.pack(side="left", padx=5)
         self.opt_action = ctk.CTkOptionMenu(
             self.input_box, 
-            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto"],
+            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto", "Pressionar Enter"],
             command=self.on_action_change,
             width=120
         )
@@ -286,6 +286,10 @@ class AutoClickerApp(ctk.CTk):
         if choice == "Digitar Texto":
             self.entry_text.pack(side="left", padx=5)
             self.text_opts_frame.pack(side="left", padx=5)
+            self.chk_double_click.pack_forget()
+        elif choice == "Pressionar Enter":
+            self.entry_text.pack_forget()
+            self.text_opts_frame.pack_forget()
             self.chk_double_click.pack_forget()
         else:
             self.entry_text.pack_forget()
@@ -461,11 +465,13 @@ class AutoClickerApp(ctk.CTk):
                 button = "right"
                 double_click = bool(self.chk_double_click.get())
             elif action_choice == "Digitar Texto":
-
                 action_type = "type"
                 text_content = self.entry_text.get()
                 use_data_file = bool(self.chk_use_file.get())
                 clear_field = bool(self.chk_clear_field.get())
+            elif action_choice == "Pressionar Enter":
+                 action_type = "key"
+                 text_content = "enter"
 
 
             self.engine.add_step(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click)

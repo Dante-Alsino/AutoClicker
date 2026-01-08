@@ -39,6 +39,7 @@ python main.py
 *   **Tipos de Ação**:
     *   **Clique Esquerdo / Direito**: Clica com o mouse. (Opção **Duplo Clique** disponível).
     *   **Digitar Texto**: Digita uma frase ou conteúdo de um arquivo `.txt` linha por linha.
+    *   **Pressionar Enter**: Move, clica para focar e pressiona a tecla `Enter`.
 
 ### 2. Gerenciando a Lista
 *   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores (Posição, Delay, Duplo Clique).
