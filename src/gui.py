@@ -84,9 +84,16 @@ class AutoClickerApp(ctk.CTk):
         self.config_frame = ctk.CTkFrame(self)
         self.config_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
 
-        # Botão de Tema (Canto Superior) - REMOVIDO DAQUI
-        # self.btn_theme...
+        self._build_input_area()
+        self._build_action_buttons()
+        self._build_file_operations()
         
+        # Lista e Controles
+        self._build_list_area()
+        self._build_controls()
+        self._build_status_footer()
+
+    def _build_input_area(self):
         # Inputs HBox
         self.input_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.input_box.pack(pady=5, padx=5, fill="x")
@@ -113,7 +120,6 @@ class AutoClickerApp(ctk.CTk):
         # Ação (Tipo)
         self.lbl_btn = ctk.CTkLabel(self.input_box, text="Ação:")
         self.lbl_btn.pack(side="left", padx=5)
-        self.lbl_btn.pack(side="left", padx=5)
         self.opt_action = ctk.CTkOptionMenu(
             self.input_box, 
             values=["Clique Esquerdo", "Clique Direito", "Digitar Texto"],
@@ -131,7 +137,6 @@ class AutoClickerApp(ctk.CTk):
         
         # Checkboxes para Texto
         self.text_opts_frame = ctk.CTkFrame(self.input_box, fg_color="transparent")
-        # Será mostrado apenas quando Digitar Texto
         
         self.chk_use_file = ctk.CTkCheckBox(self.text_opts_frame, text="Usar Arq.", width=60)
         self.chk_use_file.pack(side="left", padx=2)
@@ -139,6 +144,7 @@ class AutoClickerApp(ctk.CTk):
         self.chk_clear_field = ctk.CTkCheckBox(self.text_opts_frame, text="Limpar", width=60)
         self.chk_clear_field.pack(side="left", padx=2)
 
+    def _build_action_buttons(self):
         # Actions Box
         self.action_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.action_box.pack(pady=5, padx=5, fill="x")
@@ -149,6 +155,7 @@ class AutoClickerApp(ctk.CTk):
         self.btn_add = ctk.CTkButton(self.action_box, text="Adicionar Passo", command=self.add_step)
         self.btn_add.pack(side="left", padx=5, expand=True, fill="x")
 
+    def _build_file_operations(self):
         # Data & File Box
         self.file_box = ctk.CTkFrame(self.config_frame, fg_color="transparent")
         self.file_box.pack(pady=5, padx=5, fill="x")
@@ -175,10 +182,12 @@ class AutoClickerApp(ctk.CTk):
         self.chk_markers = ctk.CTkCheckBox(self.op_box, text="Marcadores", command=self.toggle_markers)
         self.chk_markers.pack(side="right", padx=5)
 
+    def _build_list_area(self):
         # Lista de Passos
         self.list_frame = ctk.CTkScrollableFrame(self, label_text="Sequência de Passos")
         self.list_frame.grid(row=1, column=0, padx=10, pady=(0, 10), sticky="nsew")
-        
+
+    def _build_controls(self):
         # Controles de Execução
         self.control_frame = ctk.CTkFrame(self)
         self.control_frame.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
@@ -186,7 +195,7 @@ class AutoClickerApp(ctk.CTk):
         self.btn_execute = ctk.CTkButton(self.control_frame, text="Executar Sequência", command=self.start_execution_thread, fg_color=COLOR_SUCCESS)
         self.btn_execute.pack(side="left", padx=5, pady=10, expand=True, fill="x")
 
-        # Opções de Loop (Adicionado na Fase 4)
+        # Opções de Loop
         self.loop_frame = ctk.CTkFrame(self.control_frame, fg_color="transparent")
         self.loop_frame.pack(side="left", padx=5)
 
@@ -208,7 +217,8 @@ class AutoClickerApp(ctk.CTk):
 
         self.btn_stop = ctk.CTkButton(self.control_frame, text="PARAR (F9)", command=self.stop_execution, fg_color=COLOR_ERROR)
         self.btn_stop.pack(side="left", padx=5, pady=10, expand=True, fill="x")
-        
+
+    def _build_status_footer(self):
         # Status Bar
         self.lbl_status = ctk.CTkLabel(self, text="Pronto.")
         self.lbl_status.grid(row=3, column=0, sticky="w", padx=10, pady=5)

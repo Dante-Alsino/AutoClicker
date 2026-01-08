@@ -3,9 +3,12 @@
 Um automatizador de cliques modular e moderno, desenvolvido em Python. Permite criar sequências de cliques, digitação de texto, definir delays, repetir ações em loop e salvar suas configurações para uso posterior.
 
 ## 🚀 Novidades da Versão Atual
+*   **Duplo Clique**: Suporte nativo para cliques duplos em ações do mouse.
+*   **Janela de Ajuda**: Manual completo integrado ao botão "Como funciona".
 *   **Pausa Inteligente (Tecla F8)**: Pause e retome a automação a qualquer momento.
 *   **Editor Rápido**: Dê duplo clique num passo para editar suas configurações.
-*   **Reordenação**: Botões de subir/descer para organizar sua lista facilmente.
+*   **Reordenação**: Botões compactos (▲/▼) para organizar sua lista facilmente.
+*   **Refatoração Técnica**: Código modularizado (GUI, Engine, Widgets) para maior estabilidade e facilidade de manutenção.
 *   **Visual Moderno**: Tema Escuro/Claro (Dark/Light) e feedback visual (bordas coloridas) quando pausado.
 *   **Validações**: Proteção contra coordenadas fora da tela e arquivos vazios.
 
@@ -34,12 +37,12 @@ python main.py
     2.  Posicione o mouse no local desejado e espere 3 segundos.
     3.  As coordenadas serão preenchidas automaticamente.
 *   **Tipos de Ação**:
-    *   **Clique Esquerdo / Direito**: Clica com o mouse.
+    *   **Clique Esquerdo / Direito**: Clica com o mouse. (Opção **Duplo Clique** disponível).
     *   **Digitar Texto**: Digita uma frase ou conteúdo de um arquivo `.txt` linha por linha.
 
 ### 2. Gerenciando a Lista
-*   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores.
-*   **Reordenar**: Use as setas **↑** e **↓** para mudar a ordem dos passos.
+*   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores (Posição, Delay, Duplo Clique).
+*   **Reordenar**: Use as setas **▲** e **▼** para mudar a ordem dos passos.
 *   **Remover**: Clique no **`X`** vermelho para apagar.
 *   **Marcadores**: Ative `Marcadores` para ver pontos na tela. Você pode arrastá-los para ajustar a posição fina.
 
@@ -57,6 +60,10 @@ python main.py
 
 ## 📂 Estrutura do Projeto
 *   `main.py`: Ponto de entrada.
-*   `src/`: Código fonte modular (`gui.py`, `automation.py`, `widgets.py`, `constants.py`).
+*   `src/`: Código fonte modular.
+    *   `gui.py`: Interface Gráfica (modularizada).
+    *   `automation.py`: Motor de automação (lógica de clique/digitação separada).
+    *   `widgets.py`: Componentes visuais (ex: Marcadores).
+    *   `constants.py`: Configurações globais (Cores, Tempos, Tamanhos).
 *   `json/`: Pasta sugerida para salvar suas rotinas.
 *   `logs/`: Logs de execução para depuração.

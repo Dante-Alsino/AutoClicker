@@ -1,6 +1,10 @@
 import customtkinter as ctk
 import pyautogui
 import time
+try:
+    from .constants import COLOR_MARKER, COLOR_MARKER_ACTIVE
+except ImportError:
+    from constants import COLOR_MARKER, COLOR_MARKER_ACTIVE
 
 class DraggableMarker(ctk.CTkToplevel):
     """Marcador visual que pode ser arrastado (segure 1s) ou clica através (toque rápido)."""
@@ -14,8 +18,9 @@ class DraggableMarker(ctk.CTkToplevel):
         self.attributes('-topmost', True)
         self.geometry(f"20x20+{x-10}+{y-10}") # Centraliza no ponto
         
+        
         # Cor visual
-        self.frame = ctk.CTkFrame(self, fg_color="red", corner_radius=10)
+        self.frame = ctk.CTkFrame(self, fg_color=COLOR_MARKER, corner_radius=10)
         self.frame.pack(expand=True, fill="both")
         
         # Label com número
@@ -51,15 +56,16 @@ class DraggableMarker(ctk.CTkToplevel):
         if time.time() - self.start_time < 1.0:
             return 
             
+        
         self.is_dragging = True
-        self.frame.configure(fg_color="#ff6666") # Feedback visual (vermelho mais claro)
+        self.frame.configure(fg_color=COLOR_MARKER_ACTIVE) # Feedback visual (vermelho mais claro)
         
         x = self.winfo_x() + event.x - self.x_offset
         y = self.winfo_y() + event.y - self.y_offset
         self.geometry(f"+{x}+{y}")
 
     def stop_click(self, event):
-        self.frame.configure(fg_color="red") # Restaura cor
+        self.frame.configure(fg_color=COLOR_MARKER) # Restaura cor
         
         # Se não arrastou e foi rápido (<1s), então é pass-through
         if not self.is_dragging and (time.time() - self.start_time < 1.0):

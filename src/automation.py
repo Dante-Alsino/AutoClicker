@@ -5,6 +5,13 @@ import json
 import logging
 import os
 from typing import List, Literal, Optional
+try:
+    from .constants import MOUSE_DURATION, KEY_DELAY, ACTION_DELAY
+except ImportError:
+    # Fallback caso não consiga importar (embora o try global no main deva resolver)
+    MOUSE_DURATION = 0.1
+    KEY_DELAY = 0.1
+    ACTION_DELAY = 0.1
 
 @dataclasses.dataclass
 class ClickStep:
@@ -110,6 +117,45 @@ class AutomationEngine:
 
 
 
+
+    def _execute_click(self, step: ClickStep):
+        """Executa a ação de clique do passo."""
+        btn = step.button if step.action_type == 'click' else 'left'
+        self.logger.info(f"Executando ação no ponto ({step.x}, {step.y}) com botão: {btn.upper()}")
+        
+        # Garante movimento antes do clique
+        pyautogui.moveTo(step.x, step.y)
+        
+        # Pequeno delay para garantir que o mouse "assentou"
+        time.sleep(ACTION_DELAY)
+        
+        if step.double_click and step.action_type == 'click':
+                self.logger.info("Realizando clique duplo.")
+                pyautogui.doubleClick(button=btn) 
+        else:
+            # Usa duration para segurar o clique por alguns milissegundos
+            if btn == 'right':
+                pyautogui.rightClick(duration=MOUSE_DURATION)
+            elif btn == 'middle':
+                pyautogui.middleClick(duration=MOUSE_DURATION)
+            else:
+                pyautogui.click(duration=MOUSE_DURATION)
+
+    def _execute_type(self, step: ClickStep, text_to_type: str):
+        """Executa a ação de digitar texto."""
+        # Limpar campo antes de digitar?
+        time.sleep(ACTION_DELAY)
+        if step.clear_field:
+            self.logger.info("Limpando campo (Ctrl+A + Del)...")
+            pyautogui.hotkey('ctrl', 'a')
+            time.sleep(ACTION_DELAY)
+            pyautogui.press('del')
+            time.sleep(ACTION_DELAY)
+
+        if text_to_type:
+            time.sleep(ACTION_DELAY) # Delay antes de digitar
+            pyautogui.write(text_to_type, interval=KEY_DELAY) 
+
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
         Executa a lista de passos.
@@ -183,42 +229,15 @@ class AutomationEngine:
                     print(f"Executando passo {i+1}: {step}")
                     
                     # Move e Clica
+                    print(f"Executando passo {i+1}: {step}")
+                    
                     try:
-                        btn = step.button if step.action_type == 'click' else 'left'
-                        self.logger.info(f"Executando ação no ponto ({step.x}, {step.y}) com botão: {btn.upper()}")
+                        # Verifica e executa clique/movimento
+                        self._execute_click(step)
                         
-                        # Garante movimento antes do clique
-                        pyautogui.moveTo(step.x, step.y)
-                        
-                        # Pequeno delay para garantir que o mouse "assentou"
-                        time.sleep(0.1)
-                        
-                        if step.double_click and step.action_type == 'click':
-                             self.logger.info("Realizando clique duplo.")
-                             pyautogui.doubleClick(button=btn) # doubleClick não suporta duration da mesma forma simples, mas é nativo
-                        else:
-                            # Usa duration para segurar o clique por alguns milissegundos (simula humano)
-                            if btn == 'right':
-                                pyautogui.rightClick(duration=0.1)
-                            elif btn == 'middle':
-                                pyautogui.middleClick(duration=0.1)
-                            else:
-                                pyautogui.click(duration=0.1)
-                        
-                        # Se for ação de digitar, escreve o texto
+                        # Se for ação de digitar, chama o método específico
                         if step.action_type == 'type':
-                            # Limpar campo antes de digitar?
-                            if step.clear_field:
-                                self.logger.info("Limpando campo (Ctrl+A + Del)...")
-                                time.sleep(0.1)
-                                pyautogui.hotkey('ctrl', 'a')
-                                time.sleep(0.1)
-                                pyautogui.press('del')
-                                time.sleep(0.1)
-
-                            if text_to_type:
-                                time.sleep(0.2) # Aumentado delay antes de digitar
-                                pyautogui.write(text_to_type, interval=0.1) # Digitação mais lenta
+                             self._execute_type(step, text_to_type)
                             
                     except Exception as e:
                         self.logger.error(f"Erro ao executar ação PyAutoGUI no passo {i+1}: {e}")
