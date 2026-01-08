@@ -17,6 +17,7 @@ class ClickStep:
     text_content: str = ""
     use_data_file: bool = False # Se True, usa linha do arquivo carregado
     clear_field: bool = False # Se True, envia Ctrl+A + Del antes de digitar
+    double_click: bool = False # Se True, realiza clique duplo
     
     def __str__(self) -> str:
         """Retorna representação string do passo."""
@@ -26,7 +27,8 @@ class ClickStep:
             return f"DIGITAR em ({self.x}, {self.y}):{src}{clear} - Delay: {self.delay}s"
         
         btn_pt = "ESQUERDO" if self.button == 'left' else "DIREITO" if self.button == 'right' else "MEIO"
-        return f"CLIQUE {btn_pt} em ({self.x}, {self.y}) - Delay: {self.delay}s"
+        click_type = " (DUPLO)" if self.double_click else ""
+        return f"CLIQUE {btn_pt}{click_type} em ({self.x}, {self.y}) - Delay: {self.delay}s"
 
 class AutomationEngine:
     """Gerencia a sequência de passos e a execução."""
@@ -57,9 +59,9 @@ class AutomationEngine:
             raise e
 
 
-    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False):
+    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False, double_click: bool = False):
         """Adiciona um novo passo à sequência."""
-        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field) # type: ignore
+        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click) # type: ignore
         self.steps.append(step)
         self.logger.info(f"Passo adicionado: {step}")
         print(f"Passo adicionado: {step}")
@@ -191,13 +193,17 @@ class AutomationEngine:
                         # Pequeno delay para garantir que o mouse "assentou"
                         time.sleep(0.1)
                         
-                        # Usa duration para segurar o clique por alguns milissegundos (simula humano)
-                        if btn == 'right':
-                            pyautogui.rightClick(duration=0.1)
-                        elif btn == 'middle':
-                            pyautogui.middleClick(duration=0.1)
+                        if step.double_click and step.action_type == 'click':
+                             self.logger.info("Realizando clique duplo.")
+                             pyautogui.doubleClick(button=btn) # doubleClick não suporta duration da mesma forma simples, mas é nativo
                         else:
-                            pyautogui.click(duration=0.1)
+                            # Usa duration para segurar o clique por alguns milissegundos (simula humano)
+                            if btn == 'right':
+                                pyautogui.rightClick(duration=0.1)
+                            elif btn == 'middle':
+                                pyautogui.middleClick(duration=0.1)
+                            else:
+                                pyautogui.click(duration=0.1)
                         
                         # Se for ação de digitar, escreve o texto
                         if step.action_type == 'type':
@@ -270,6 +276,7 @@ class AutomationEngine:
                 text = item.get('text_content', '')
                 use_file = item.get('use_data_file', False) # Default False para retrocompatibilidade
                 clear = item.get('clear_field', False)
+                double = item.get('double_click', False)
                 
                 self.add_step(
                     x=int(item['x']),
@@ -279,7 +286,8 @@ class AutomationEngine:
                     action_type=str(action),
                     text_content=str(text),
                     use_data_file=bool(use_file),
-                    clear_field=bool(clear)
+                    clear_field=bool(clear),
+                    double_click=bool(double)
                 )
             self.logger.info(f"Sequência carregada de {filepath}")
             print(f"Sequência carregada de {filepath}")

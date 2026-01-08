@@ -16,5 +16,5 @@ COLOR_WAITING = "red"
 # Padrões da UI
 DEFAULT_DELAY = "1.0"
 DEFAULT_LOOPS = "1"
-WINDOW_SIZE = "800x600"
+WINDOW_SIZE = "900x500"
 APP_TITLE = "AutoClicker Modular"
