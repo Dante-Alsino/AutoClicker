@@ -20,7 +20,7 @@ class ClickStep:
     y: int
     delay: float  # Tempo de espera APÓS a ação
     button: Literal['left', 'right', 'middle'] = 'left'
-    action_type: Literal['click', 'type'] = 'click'
+    action_type: Literal['click', 'type', 'key'] = 'click'
     text_content: str = ""
     use_data_file: bool = False # Se True, usa linha do arquivo carregado
     clear_field: bool = False # Se True, envia Ctrl+A + Del antes de digitar
@@ -32,6 +32,9 @@ class ClickStep:
             src = " (ARQUIVO)" if self.use_data_file else f" '{self.text_content}'"
             clear = " [LIMPAR]" if self.clear_field else ""
             return f"DIGITAR em ({self.x}, {self.y}):{src}{clear} - Delay: {self.delay}s"
+        
+        if self.action_type == 'key':
+             return f"TECLA '{self.text_content.upper()}' em ({self.x}, {self.y}) - Delay: {self.delay}s"
         
         btn_pt = "ESQUERDO" if self.button == 'left' else "DIREITO" if self.button == 'right' else "MEIO"
         click_type = " (DUPLO)" if self.double_click else ""
@@ -156,6 +159,50 @@ class AutomationEngine:
             time.sleep(ACTION_DELAY) # Delay antes de digitar
             pyautogui.write(text_to_type, interval=KEY_DELAY) 
 
+    def _execute_key(self, step: ClickStep):
+        """Executa a ação de pressionar uma tecla isolada."""
+        key = step.text_content
+        self.logger.info(f"Pressionando tecla: {key}")
+        
+        # Garante movimento (opcional, mas bom se o foco depende do mouse)
+        pyautogui.moveTo(step.x, step.y)
+        time.sleep(ACTION_DELAY)
+        
+        # Clica para garantir foco? O usuário pode querer apenas Enter sem clique.
+        # Mas o padrão 'ClickStep' tem X/Y. Vamos assumir que ele move para X,Y e clica?
+        # A request do user é "botao de enter em uma das opcoes".
+        # Geralmente ENTER precisa de foco. 
+        # Vamos fazer: Move -> Click (Left) -> Press Key.
+        # Ou Move -> Press Key?
+        # Analisando o ClickStep, ele tem X e Y. Se o usuário define X/Y, ele espera interação lá.
+        # Para ser seguro: Move e Clica (para dar foco) e depois aperta Enter.
+        # Mas se o usuário quiser só apertar Enter sem clicar?
+        # Vamos fazer Move -> Press. Se o usuário quiser clicar, ele adiciona um passo de clique antes.
+        # Mas espere, se eu não clicar, o foco pode não estar lá.
+        # Vou seguir o padrão de 'type': Move, Click (implícito? Não, Type não clica explicitamente no meu código anterior? vamos checar)
+        # O código anterior de 'execute_sequence' fazia: moveTo, sleep, IF click -> click, IF type -> write.
+        # O 'type' anterior NÃO clicava explicitamente, ele aproveitava o moveTo? Não, moveTo não clica.
+        # Verifiquei o código antigo:
+        # try: btn = ... ; moveTo; sleep; if click... else... if type...
+        # O type rodava DEPOIS do bloco de click, mas 'type' era action_type separado.
+        # Se action_type == 'type', ele NÃO entrava no if click?
+        # Código anterior:
+        # btn = step.button if step.action_type == 'click' else 'left'
+        # moveTo...
+        # if step.double_click and step.action_type == 'click': ...
+        # else: ... pyautogui.click ...
+        # OPA! O código anterior clicava SEMPRE, exceto se eu mudasse a lógica.
+        # Vamos olhar o código refatorado `_execute_click`.
+        # Ele só é chamado se eu chamar.
+        
+        # Decisão: 'key' deve Mover E Clicar (para garantir foco) ou só pressionar?
+        # Se eu só pressionar, pode não funcionar se o foco não estiver lá.
+        # Vou fazer: Move -> Clica (Esquerdo) -> Pressiona Enter.
+        # Isso é o mais robusto para "clicar num botão e dar enter" ou "focar num campo e dar enter".
+        pyautogui.click(step.x, step.y) 
+        time.sleep(ACTION_DELAY)
+        pyautogui.press(key)
+
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
         Executa a lista de passos.
@@ -238,6 +285,9 @@ class AutomationEngine:
                         # Se for ação de digitar, chama o método específico
                         if step.action_type == 'type':
                              self._execute_type(step, text_to_type)
+                        
+                        if step.action_type == 'key':
+                             self._execute_key(step)
                             
                     except Exception as e:
                         self.logger.error(f"Erro ao executar ação PyAutoGUI no passo {i+1}: {e}")
