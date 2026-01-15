@@ -25,6 +25,7 @@ class ClickStep:
     use_data_file: bool = False # Se True, usa linha do arquivo carregado
     clear_field: bool = False # Se True, envia Ctrl+A + Del antes de digitar
     double_click: bool = False # Se True, realiza clique duplo
+    scroll_amount: int = 0 # Quantidade de scroll (Positivo=Cima, Negativo=Baixo)
     
     def __str__(self) -> str:
         """Retorna representação string do passo."""
@@ -32,6 +33,10 @@ class ClickStep:
             src = " (ARQUIVO)" if self.use_data_file else f" '{self.text_content}'"
             clear = " [LIMPAR]" if self.clear_field else ""
             return f"DIGITAR em ({self.x}, {self.y}):{src}{clear} - Delay: {self.delay}s"
+        
+        if self.action_type == 'scroll':
+            direction = "CIMA" if self.scroll_amount > 0 else "BAIXO"
+            return f"SCROLL {direction} ({abs(self.scroll_amount)}) em ({self.x}, {self.y}) - Delay: {self.delay}s"
         
         if self.action_type == 'key':
              return f"TECLA '{self.text_content.upper()}' em ({self.x}, {self.y}) - Delay: {self.delay}s"
@@ -69,9 +74,9 @@ class AutomationEngine:
             raise e
 
 
-    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False, double_click: bool = False):
+    def add_step(self, x: int, y: int, delay: float, button: str = 'left', action_type: str = 'click', text_content: str = "", use_data_file: bool = False, clear_field: bool = False, double_click: bool = False, scroll_amount: int = 0):
         """Adiciona um novo passo à sequência."""
-        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click) # type: ignore
+        step = ClickStep(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click, scroll_amount) # type: ignore
         self.steps.append(step)
         self.logger.info(f"Passo adicionado: {step}")
         print(f"Passo adicionado: {step}")
@@ -201,7 +206,20 @@ class AutomationEngine:
         # Isso é o mais robusto para "clicar num botão e dar enter" ou "focar num campo e dar enter".
         pyautogui.click(step.x, step.y) 
         time.sleep(ACTION_DELAY)
+        pyautogui.click(step.x, step.y) 
+        time.sleep(ACTION_DELAY)
         pyautogui.press(key)
+
+    def _execute_scroll(self, step: ClickStep):
+        """Executa a ação de scroll."""
+        self.logger.info(f"Executando scroll de {step.scroll_amount} em ({step.x}, {step.y})")
+        
+        # Garante movimento para a área de scroll
+        pyautogui.moveTo(step.x, step.y)
+        time.sleep(ACTION_DELAY)
+        
+        # Executa o scroll
+        pyautogui.scroll(step.scroll_amount)
 
     def execute_sequence(self, loops: int = 1, infinite: bool = False, on_step_callback=None, confirm_between_loops: bool = False, confirm_callback=None):
         """
@@ -288,6 +306,9 @@ class AutomationEngine:
                         
                         if step.action_type == 'key':
                              self._execute_key(step)
+
+                        if step.action_type == 'scroll':
+                             self._execute_scroll(step)
                             
                     except Exception as e:
                         self.logger.error(f"Erro ao executar ação PyAutoGUI no passo {i+1}: {e}")
@@ -356,7 +377,8 @@ class AutomationEngine:
                     text_content=str(text),
                     use_data_file=bool(use_file),
                     clear_field=bool(clear),
-                    double_click=bool(double)
+                    double_click=bool(double),
+                    scroll_amount=int(item.get('scroll_amount', 0))
                 )
             self.logger.info(f"Sequência carregada de {filepath}")
             print(f"Sequência carregada de {filepath}")
