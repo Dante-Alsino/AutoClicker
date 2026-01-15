@@ -61,6 +61,15 @@ python main.py
 *   **Carregar JSON**: Carregue uma rotina salva.
 *   **Carregar Dados (.txt)**: Carregue uma lista de textos para usar na ação "Digitar Texto" (opção 'Usar Arq.').
 
+### 5. Gerando Executável (.exe)
+Para criar um arquivo único `.exe` para distribuir:
+1.  Instale os requisitos: `pip install -r requirements.txt`
+2.  Execute o script de build:
+    ```bash
+    python tools/build_exe.py
+    ```
+3.  O executável será criado na pasta `dist/`. Basta enviar esse arquivo para quem for usar.
+
 ## 📂 Estrutura do Projeto
 *   `main.py`: Ponto de entrada.
 *   `src/`: Código fonte modular.
