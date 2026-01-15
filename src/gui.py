@@ -257,9 +257,10 @@ class AutoClickerApp(ctk.CTk):
 --------------------
    - Coordenadas (X, Y): Digite manualmente ou use o botão "Capturar (3s)".
    - Capturar: Clique, leve o mouse ao alvo e espere 3 segundos.
-    - Ação: Escolha entre Clique (Esq/Dir), Digitar Texto ou Scroll.
+    - Ação: Escolha entre Clique (Esq/Dir), Digitar Texto, Pressionar Enter ou Scroll.
     - Duplo Clique: Marque a caixa para realizar dois cliques rápidos.
     - Scroll: Defina a quantidade (ex: 100). Positivo sobe, negativo desce.
+    - Pressionar Enter: Move o mouse, clica e pressiona Enter.
     - Adicionar: Clique em "Adicionar Passo" para inserir na lista.
 
 2. GERENCIANDO A LISTA
