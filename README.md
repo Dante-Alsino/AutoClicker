@@ -15,24 +15,59 @@ Um automatizador de cliques modular e moderno, desenvolvido em Python. Permite c
 
 ---
 
-## 🛠 Como Usar
+## 💾 Instalação e Execução
 
-### Pré-requisitos
-- Python 3.10 ou superior instalado.
-- Dependências instaladas (`pip install -r requirements.txt`).
+Você pode usar o AutoClicker de duas formas:
 
-### Executando
-No terminal, execute:
-```bash
-python main.py
-```
+### Opção 1: Executável (Recomendado para Usuários)
+Não requer instalação de Python.
+1. Baixe o arquivo `AutoClicker.exe` (gerado na pasta `dist/` após o build ou disponível nas Releases).
+2. Dê dois cliques para abrir.
+3. Pronto!
+
+### Opção 2: Código Fonte (Para Desenvolvedores)
+Requer Python 3.10+ instalado.
+
+1. Clone o repositório ou baixe o código.
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Execute o programa:
+   ```bash
+   python main.py
+   ```
+
+### Opção 3: Criando seu próprio Executável
+Se você baixou o código fonte e quer gerar o arquivo `.exe`:
+1. Certifique-se de ter instalado as dependências (`pip install -r requirements.txt`).
+2. Rode o script de build:
+   ```bash
+   python tools/build_exe.py
+   ```
+3. O executável será criado na pasta `dist/`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+*   `main.py`: Ponto de entrada da aplicação.
+*   `src/`: Código fonte modular.
+    *   `gui.py`: Interface Gráfica (construída com CustomTkinter).
+    *   `automation.py`: Motor de automação (lógica de cliques, teclado e scroll).
+    *   `widgets.py`: Componentes visuais personalizados (ex: Marcadores).
+    *   `constants.py`: Configurações globais (Cores, Tempos, Tamanhos).
+*   `tools/`: Ferramentas utilitárias.
+    *   `build_exe.py`: Script para gerar o executável automaticamente.
+*   `json/`: Pasta sugerida para salvar suas rotinas.
+*   `logs/`: Logs de execução para depuração.
 
 ---
 
 ## 📖 Manual de Instruções
 
 ### 1. Adicionando Passos
-*   **Manual**: Digite as coordenadas X e Y e o tempo de Delay (espera após o clique).
+*   **Manual**: Digite as coordenadas X e Y e o tempo de Delay (espera após a ação).
 *   **Captura (Recomendado)**:
     1.  Clique em **`Capturar (3s)`**.
     2.  Posicione o mouse no local desejado e espere 3 segundos.
@@ -44,38 +79,19 @@ python main.py
     *   **Scroll**: Realiza rolagem da página na posição alvo. (Positivo = Cima, Negativo = Baixo).
 
 ### 2. Gerenciando a Lista
-*   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores (Posição, Delay, Duplo Clique).
+*   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores (Posição, Delay, Scroll, etc).
 *   **Reordenar**: Use as setas **▲** e **▼** para mudar a ordem dos passos.
 *   **Remover**: Clique no **`X`** vermelho para apagar.
-*   **Marcadores**: Ative `Marcadores` para ver pontos na tela. Você pode arrastá-los para ajustar a posição fina.
+*   **Marcadores**: Ative `Marcadores` para ver pontos visuais na tela. Você pode arrastá-los com o mouse para ajustar a posição fina.
 
 ### 3. Fila de Execução e Controle
-*   **Loops**: Defina quantas vezes repetir ou marque `Loop Infinito`.
-*   **Confirmar Loops**: Se marcado, o programa pausa e pede confirmação entre cada repetição.
+*   **Loops**: Defina quantas vezes repetir a sequência ou marque `Loop Infinito`.
+*   **Confirmar Loops**: Se marcado, o programa pausa e pede confirmação do usuário entre cada repetição.
 *   **Iniciar**: Clique em **`Executar Sequência`**.
-*   **PAUSAR (F8)**: Pressione **F8** para pausar. A borda ficará LARANJA. Pressione F8 novamente para retomar.
-*   **PARAR (F9)**: Pressione **F9** para abortar a execução imediatamente.
+*   **PAUSAR (F8)**: Pressione **F8** para pausar. A borda da janela ficará LARANJA. Pressione F8 novamente para retomar.
+*   **PARAR (F9)**: Pressione **F9** para abortar a execução imediatamente (Emergência).
 
-### 4. Arquivos
-*   **Salvar JSON**: Salve sua rotina para usar depois.
-*   **Carregar JSON**: Carregue uma rotina salva.
-*   **Carregar Dados (.txt)**: Carregue uma lista de textos para usar na ação "Digitar Texto" (opção 'Usar Arq.').
-
-### 5. Gerando Executável (.exe)
-Para criar um arquivo único `.exe` para distribuir:
-1.  Instale os requisitos: `pip install -r requirements.txt`
-2.  Execute o script de build:
-    ```bash
-    python tools/build_exe.py
-    ```
-3.  O executável será criado na pasta `dist/`. Basta enviar esse arquivo para quem for usar.
-
-## 📂 Estrutura do Projeto
-*   `main.py`: Ponto de entrada.
-*   `src/`: Código fonte modular.
-    *   `gui.py`: Interface Gráfica (modularizada).
-    *   `automation.py`: Motor de automação (lógica de clique/digitação separada).
-    *   `widgets.py`: Componentes visuais (ex: Marcadores).
-    *   `constants.py`: Configurações globais (Cores, Tempos, Tamanhos).
-*   `json/`: Pasta sugerida para salvar suas rotinas.
-*   `logs/`: Logs de execução para depuração.
+### 4. Arquivos e Dados
+*   **Salvar JSON**: Salve sua rotina atual para usar depois.
+*   **Carregar JSON**: Carregue uma rotina salva anteriormente.
+*   **Carregar Dados (.txt)**: Carregue uma lista de textos para usar na ação "Digitar Texto" (selecione a opção 'Usar Arq.').
