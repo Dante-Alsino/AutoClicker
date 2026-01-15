@@ -122,7 +122,7 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_btn.pack(side="left", padx=5)
         self.opt_action = ctk.CTkOptionMenu(
             self.input_box, 
-            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto", "Pressionar Enter"],
+            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto", "Pressionar Enter", "Scroll"],
             command=self.on_action_change,
             width=120
         )
@@ -143,6 +143,16 @@ class AutoClickerApp(ctk.CTk):
         
         self.chk_clear_field = ctk.CTkCheckBox(self.text_opts_frame, text="Limpar", width=60)
         self.chk_clear_field.pack(side="left", padx=2)
+
+        # Scroll Input (Inicialmente oculto)
+        self.scroll_frame = ctk.CTkFrame(self.input_box, fg_color="transparent")
+        self.lbl_scroll = ctk.CTkLabel(self.scroll_frame, text="Qtd:")
+        self.lbl_scroll.pack(side="left", padx=2)
+        self.entry_scroll = ctk.CTkEntry(self.scroll_frame, width=60)
+        self.entry_scroll.insert(0, "100")
+        self.entry_scroll.pack(side="left", padx=2)
+        self.lbl_scroll_hint = ctk.CTkLabel(self.scroll_frame, text="(Pos=Cima, Neg=Baixo)", text_color="gray", font=("Arial", 10))
+        self.lbl_scroll_hint.pack(side="left", padx=5)
 
     def _build_action_buttons(self):
         # Actions Box
@@ -247,9 +257,10 @@ class AutoClickerApp(ctk.CTk):
 --------------------
    - Coordenadas (X, Y): Digite manualmente ou use o botão "Capturar (3s)".
    - Capturar: Clique, leve o mouse ao alvo e espere 3 segundos.
-   - Ação: Escolha entre Clique (Esq/Dir) ou Digitar Texto.
-   - Duplo Clique: Marque a caixa para realizar dois cliques rápidos.
-   - Adicionar: Clique em "Adicionar Passo" para inserir na lista.
+    - Ação: Escolha entre Clique (Esq/Dir), Digitar Texto ou Scroll.
+    - Duplo Clique: Marque a caixa para realizar dois cliques rápidos.
+    - Scroll: Defina a quantidade (ex: 100). Positivo sobe, negativo desce.
+    - Adicionar: Clique em "Adicionar Passo" para inserir na lista.
 
 2. GERENCIANDO A LISTA
 ----------------------
@@ -282,18 +293,23 @@ class AutoClickerApp(ctk.CTk):
         textbox.insert("0.0", help_text)
         textbox.configure(state="disabled")
 
+
+
     def on_action_change(self, choice):
+        # Esconde/Mostra baseado na escolha
+        self.entry_text.pack_forget()
+        self.text_opts_frame.pack_forget()
+        self.chk_double_click.pack_forget()
+        self.scroll_frame.pack_forget()
+
         if choice == "Digitar Texto":
             self.entry_text.pack(side="left", padx=5)
             self.text_opts_frame.pack(side="left", padx=5)
-            self.chk_double_click.pack_forget()
         elif choice == "Pressionar Enter":
-            self.entry_text.pack_forget()
-            self.text_opts_frame.pack_forget()
-            self.chk_double_click.pack_forget()
+            pass # Nada extra
+        elif choice == "Scroll":
+            self.scroll_frame.pack(side="left", padx=5)
         else:
-            self.entry_text.pack_forget()
-            self.text_opts_frame.pack_forget()
             self.chk_double_click.pack(side="left", padx=5)
 
     def load_data(self):
@@ -393,12 +409,23 @@ class AutoClickerApp(ctk.CTk):
         if step.action_type == 'click':
             chk_double.pack(pady=5)
         
+        # Opção de scroll no editor
+        if step.action_type == 'scroll':
+            ctk.CTkLabel(dialog, text="Scroll (+Cima/-Baixo):").pack(pady=5)
+            entry_scroll_edit = ctk.CTkEntry(dialog)
+            entry_scroll_edit.insert(0, str(step.scroll_amount))
+            entry_scroll_edit.pack(pady=5)
+
         def save():
             try:
                 step.x = int(entry_x.get())
                 step.y = int(entry_y.get())
                 step.delay = float(entry_delay.get())
                 step.double_click = bool(chk_double.get())
+                
+                if step.action_type == 'scroll':
+                    step.scroll_amount = int(entry_scroll_edit.get())
+
                 self.engine.update_step(index, step)
                 self._refresh_list()
                 dialog.destroy()
@@ -450,13 +477,13 @@ class AutoClickerApp(ctk.CTk):
             delay = float(delay_str)
             action_choice = self.opt_action.get()
             
-            # Mapeia gui choice para backend
             button = "left"
             action_type = "click"
             text_content = ""
             use_data_file = False
             clear_field = False
             double_click = False
+            scroll_amount = 0
             
             if action_choice == "Clique Esquerdo":
                 button = "left"
@@ -472,9 +499,15 @@ class AutoClickerApp(ctk.CTk):
             elif action_choice == "Pressionar Enter":
                  action_type = "key"
                  text_content = "enter"
+            elif action_choice == "Scroll":
+                action_type = "scroll"
+                try:
+                    scroll_amount = int(self.entry_scroll.get())
+                except ValueError:
+                     self.lbl_status.configure(text="Erro: Valor de scroll inválido!", text_color="red")
+                     return
 
-
-            self.engine.add_step(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click)
+            self.engine.add_step(x, y, delay, button, action_type, text_content, use_data_file, clear_field, double_click, scroll_amount)
             self._refresh_list()
             self.lbl_status.configure(text="Passo adicionado.", text_color="white")
         except ValueError:
