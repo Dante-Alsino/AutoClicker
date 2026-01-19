@@ -3,7 +3,7 @@
 
 #define MyAppName "AutoClicker"
 #define MyAppVersion "1.0"
-#define MyAppPublisher "SeuNome"
+#define MyAppPublisher "Dante Alsino"
 #define MyAppExeName "AutoClicker.exe"
 
 [Setup]
