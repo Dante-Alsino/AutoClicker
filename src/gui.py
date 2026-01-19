@@ -281,7 +281,7 @@ class AutoClickerApp(ctk.CTk):
         textbox = ctk.CTkTextbox(help_window, width=480, height=380)
         textbox.pack(padx=10, pady=10)
         
-        help_text = """MANUAL DO AUTOCLICKER MODULAR
+        help_text = """MANUAL DO AUTOCLICKER
 
 1. ADICIONANDO AÇÕES
 --------------------
