@@ -26,14 +26,17 @@ except ImportError:
 import queue
 
 # Configuração de Logging
-if not os.path.exists("logs"):
-    os.makedirs("logs")
+app_data = os.getenv('APPDATA')
+log_dir = os.path.join(app_data, "AutoClicker", "logs")
+
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        RotatingFileHandler("logs/app.log", maxBytes=1_000_000, backupCount=3, encoding='utf-8'),
+        RotatingFileHandler(os.path.join(log_dir, "app.log"), maxBytes=1_000_000, backupCount=3, encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -52,9 +55,27 @@ class AutoClickerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("AutoClicker Modular")
-        self.title("AutoClicker Modular")
+        self.title("AutoClicker")
         self.geometry(WINDOW_SIZE)
+        
+        # Close Splash Screen if exists
+        try:
+            import pyi_splash
+            pyi_splash.close()
+        except ImportError:
+            pass
+
+        # Set Icon
+        try:
+            from PIL import Image, ImageTk
+            icon_path = os.path.join("assets", "logo.png")
+            if os.path.exists(icon_path):
+                # self.iconbitmap(icon_path) # Requires .ico
+                # Use iconphoto for PNG support
+                 img = Image.open(icon_path)
+                 self.iconphoto(False, ImageTk.PhotoImage(img))
+        except Exception as e:
+            print(f"Erro ao carregar icone: {e}")
         
         self.engine = AutomationEngine()
         self.markers = []
@@ -122,7 +143,7 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_btn.pack(side="left", padx=5)
         self.opt_action = ctk.CTkOptionMenu(
             self.input_box, 
-            values=["Clique Esquerdo", "Clique Direito", "Digitar Texto", "Pressionar Enter", "Scroll"],
+        values=["Clique Esquerdo", "Clique Direito", "Digitar Texto", "Pressionar Enter", "Atalho de Teclado", "Scroll"],
             command=self.on_action_change,
             width=120
         )
@@ -153,6 +174,15 @@ class AutoClickerApp(ctk.CTk):
         self.entry_scroll.pack(side="left", padx=2)
         self.lbl_scroll_hint = ctk.CTkLabel(self.scroll_frame, text="(Pos=Cima, Neg=Baixo)", text_color="gray", font=("Arial", 10))
         self.lbl_scroll_hint.pack(side="left", padx=5)
+
+        # Key Capture (Inicialmente oculto)
+        self.key_frame = ctk.CTkFrame(self.input_box, fg_color="transparent")
+        
+        self.btn_capture_key = ctk.CTkButton(self.key_frame, text="Capturar Tecla", command=self.start_key_capture_thread, width=100, fg_color=COLOR_CAPTURE)
+        self.btn_capture_key.pack(side="left", padx=2)
+        
+        self.entry_key = ctk.CTkEntry(self.key_frame, width=100, placeholder_text="Aguardando...")
+        self.entry_key.pack(side="left", padx=2)
 
     def _build_action_buttons(self):
         # Actions Box
@@ -310,6 +340,8 @@ class AutoClickerApp(ctk.CTk):
             pass # Nada extra
         elif choice == "Scroll":
             self.scroll_frame.pack(side="left", padx=5)
+        elif choice == "Atalho de Teclado":
+            self.key_frame.pack(side="left", padx=5)
         else:
             self.chk_double_click.pack(side="left", padx=5)
 
@@ -455,6 +487,32 @@ class AutoClickerApp(ctk.CTk):
         self.entry_y.insert(0, str(y))
         self.lbl_status.configure(text=f"Capturado: {x}, {y}")
 
+    def start_key_capture_thread(self):
+        """Inicia thread para capturar atalho de teclado."""
+        self.btn_capture_key.configure(state="disabled", text="Pressione...")
+        self.entry_key.delete(0, "end")
+        self.lbl_status.configure(text="Pressione o atalho desejado...", text_color="yellow")
+        threading.Thread(target=self._capture_key_worker, daemon=True).start()
+
+    def _capture_key_worker(self):
+        """Worker que espera o hotkey."""
+        try:
+            # Lê o hotkey. Suppress=False para não bloquear o sistema.
+            hotkey = keyboard.read_hotkey(suppress=False) 
+            self.after(0, lambda: self._update_key_ui(hotkey))
+        except Exception as e:
+            print(f"Erro ao capturar tecla: {e}")
+            self.after(0, lambda: self._reset_key_btn())
+
+    def _update_key_ui(self, hotkey):
+        self.entry_key.delete(0, "end")
+        self.entry_key.insert(0, str(hotkey))
+        self.lbl_status.configure(text=f"Atalho capturado: {hotkey}")
+        self._reset_key_btn()
+
+    def _reset_key_btn(self):
+        self.btn_capture_key.configure(state="normal", text="Capturar Tecla")
+
     def add_step(self):
         try:
             # Validação simples
@@ -500,6 +558,12 @@ class AutoClickerApp(ctk.CTk):
             elif action_choice == "Pressionar Enter":
                  action_type = "key"
                  text_content = "enter"
+            elif action_choice == "Atalho de Teclado":
+                 action_type = "key"
+                 text_content = self.entry_key.get()
+                 if not text_content:
+                     self.lbl_status.configure(text="Erro: Capture ou digite um atalho!", text_color="red")
+                     return
             elif action_choice == "Scroll":
                 action_type = "scroll"
                 try:

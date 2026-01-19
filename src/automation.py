@@ -165,50 +165,22 @@ class AutomationEngine:
             pyautogui.write(text_to_type, interval=KEY_DELAY) 
 
     def _execute_key(self, step: ClickStep):
-        """Executa a ação de pressionar uma tecla isolada."""
-        key = step.text_content
-        self.logger.info(f"Pressionando tecla: {key}")
+        """Executa a ação de pressionar uma tecla ou atalho."""
+        keys_str = step.text_content.lower()
+        self.logger.info(f"Pressionando tecla(s): {keys_str}")
         
-        # Garante movimento (opcional, mas bom se o foco depende do mouse)
-        pyautogui.moveTo(step.x, step.y)
+        # Garante foco com clique
+        pyautogui.click(step.x, step.y)
         time.sleep(ACTION_DELAY)
         
-        # Clica para garantir foco? O usuário pode querer apenas Enter sem clique.
-        # Mas o padrão 'ClickStep' tem X/Y. Vamos assumir que ele move para X,Y e clica?
-        # A request do user é "botao de enter em uma das opcoes".
-        # Geralmente ENTER precisa de foco. 
-        # Vamos fazer: Move -> Click (Left) -> Press Key.
-        # Ou Move -> Press Key?
-        # Analisando o ClickStep, ele tem X e Y. Se o usuário define X/Y, ele espera interação lá.
-        # Para ser seguro: Move e Clica (para dar foco) e depois aperta Enter.
-        # Mas se o usuário quiser só apertar Enter sem clicar?
-        # Vamos fazer Move -> Press. Se o usuário quiser clicar, ele adiciona um passo de clique antes.
-        # Mas espere, se eu não clicar, o foco pode não estar lá.
-        # Vou seguir o padrão de 'type': Move, Click (implícito? Não, Type não clica explicitamente no meu código anterior? vamos checar)
-        # O código anterior de 'execute_sequence' fazia: moveTo, sleep, IF click -> click, IF type -> write.
-        # O 'type' anterior NÃO clicava explicitamente, ele aproveitava o moveTo? Não, moveTo não clica.
-        # Verifiquei o código antigo:
-        # try: btn = ... ; moveTo; sleep; if click... else... if type...
-        # O type rodava DEPOIS do bloco de click, mas 'type' era action_type separado.
-        # Se action_type == 'type', ele NÃO entrava no if click?
-        # Código anterior:
-        # btn = step.button if step.action_type == 'click' else 'left'
-        # moveTo...
-        # if step.double_click and step.action_type == 'click': ...
-        # else: ... pyautogui.click ...
-        # OPA! O código anterior clicava SEMPRE, exceto se eu mudasse a lógica.
-        # Vamos olhar o código refatorado `_execute_click`.
-        # Ele só é chamado se eu chamar.
-        
-        # Decisão: 'key' deve Mover E Clicar (para garantir foco) ou só pressionar?
-        # Se eu só pressionar, pode não funcionar se o foco não estiver lá.
-        # Vou fazer: Move -> Clica (Esquerdo) -> Pressiona Enter.
-        # Isso é o mais robusto para "clicar num botão e dar enter" ou "focar num campo e dar enter".
-        pyautogui.click(step.x, step.y) 
-        time.sleep(ACTION_DELAY)
-        pyautogui.click(step.x, step.y) 
-        time.sleep(ACTION_DELAY)
-        pyautogui.press(key)
+        # Se houver '+', trata como combinação (hotkey)
+        if '+' in keys_str:
+            keys = keys_str.split('+')
+            # Remove espaços em branco que possam existir (ex: ctrl + c)
+            keys = [k.strip() for k in keys]
+            pyautogui.hotkey(*keys)
+        else:
+            pyautogui.press(keys_str)
 
     def _execute_scroll(self, step: ClickStep):
         """Executa a ação de scroll."""
