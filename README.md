@@ -1,34 +1,39 @@
-# Modular AutoClicker
+# AutoClicker
 
-Um automatizador de cliques modular e moderno, desenvolvido em Python. Permite criar sequências de cliques, digitação de texto, definir delays, repetir ações em loop e salvar suas configurações para uso posterior.
+Um automatizador eficiente para Windows, desenvolvido em Python. Automatize cliques, digitação, atalhos de teclado e scrolls com facilidade.
 
-## 🚀 Novidades da Versão Atual
-*   **Scroll do Mouse**: Adicione passos de rolagem (cima/baixo) para navegar em páginas e formulários.
-*   **Duplo Clique**: Suporte nativo para cliques duplos em ações do mouse.
-*   **Janela de Ajuda**: Manual completo integrado ao botão "Como funciona".
-*   **Pausa Inteligente (Tecla F8)**: Pause e retome a automação a qualquer momento.
-*   **Editor Rápido**: Dê duplo clique num passo para editar suas configurações.
-*   **Reordenação**: Botões compactos (▲/▼) para organizar sua lista facilmente.
-*   **Refatoração Técnica**: Código modularizado (GUI, Engine, Widgets) para maior estabilidade e facilidade de manutenção.
-*   **Visual Moderno**: Tema Escuro/Claro (Dark/Light) e feedback visual (bordas coloridas) quando pausado.
-*   **Validações**: Proteção contra coordenadas fora da tela e arquivos vazios.
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Dante-Alsino/AutoClicker?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/Dante-Alsino/AutoClicker?style=flat-square)
+
+## 🚀 Novidades da Versão 1.0.0
+*   **Instalador Profissional**: Setup simples que configura tudo para você.
+*   **Captura de Atalhos**: Grave e reproduza atalhos de teclado (ex: `Ctrl+C`, `Alt+Tab`) de forma nativa.
+*   **Identidade Visual**: Novo ícone moderno e Splash Screen de carregamento.
+*   **Logs Otimizados**: Sistema de logs salvo corretamente em `%APPDATA%`, sem erros de permissão.
+*   **Pausa Inteligente (F8)**: Pause e retome a automação a qualquer momento com feedback visual.
+*   **Editor Completo**: Edite passos, reordene a lista e use marcadores visuais na tela.
 
 ---
 
-## 💾 Instalação e Execução
+## 💾 Download e Instalação
 
-Você pode usar o AutoClicker de duas formas:
+### Usuário Final (Recomendado)
+Vá até a aba **[Releases](https://github.com/Dante-Alsino/AutoClicker/releases)** e baixe o arquivo:
+*   📦 **`AutoClickerSetup.exe`**: Instala o programa, cria atalhos na Área de Trabalho e Menu Iniciar.
 
-### Opção 1: Executável (Recomendado para Usuários)
-Não requer instalação de Python.
-1. Baixe o arquivo `AutoClicker.exe` (gerado na pasta `dist/` após o build ou disponível nas Releases).
-2. Dê dois cliques para abrir.
-3. Pronto!
+### Versão Portátil
+*   🚀 **`AutoClicker.exe`**: Execute diretamente sem instalar (ideal para pen drives).
 
-### Opção 2: Código Fonte (Para Desenvolvedores)
+---
+
+## 🛠️ Para Desenvolvedores (Código Fonte)
+
 Requer Python 3.10+ instalado.
 
-1. Clone o repositório ou baixe o código.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Dante-Alsino/AutoClicker.git
+   ```
 2. Instale as dependências:
    ```bash
    pip install -r requirements.txt
@@ -37,61 +42,30 @@ Requer Python 3.10+ instalado.
    ```bash
    python main.py
    ```
-
-### Opção 3: Criando seu próprio Executável
-Se você baixou o código fonte e quer gerar o arquivo `.exe`:
-1. Certifique-se de ter instalado as dependências (`pip install -r requirements.txt`).
-2. Rode o script de build:
+4. Gerar executável e instalador:
    ```bash
-   python tools/build_exe.py
+   python build.py      # Gera o .exe em dist/ e Output/
+   # Para o instalador, compile o arquivo 'setup.iss' com o Inno Setup Compiler.
    ```
-3. O executável será criado na pasta `dist/`.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📖 Como Usar
 
-*   `main.py`: Ponto de entrada da aplicação.
-*   `src/`: Código fonte modular.
-    *   `gui.py`: Interface Gráfica (construída com CustomTkinter).
-    *   `automation.py`: Motor de automação (lógica de cliques, teclado e scroll).
-    *   `widgets.py`: Componentes visuais personalizados (ex: Marcadores).
-    *   `constants.py`: Configurações globais (Cores, Tempos, Tamanhos).
-*   `tools/`: Ferramentas utilitárias.
-    *   `build_exe.py`: Script para gerar o executável automaticamente.
-*   `json/`: Pasta sugerida para salvar suas rotinas.
-*   `logs/`: Logs de execução para depuração.
+### 1. Adicionando Ações
+*   **Captura de Mouse**: Clique em `Capturar (3s)`, posicione o mouse e espere.
+*   **Captura de Teclado**: Selecione `Atalho de Teclado`, clique em `Capturar` e pressione a combinação (ex: `Ctrl+Shift+Del`).
+*   **Texto e Digitação**: O robô pode digitar textos fixos ou ler linha-por-linha de um arquivo `.txt` externo.
+
+### 2. Controles
+*   **Executar**: Inicia a sequência.
+*   **F8**: Pausa/Retoma a execução.
+*   **F9**: Parada de Emergência (Stop).
 
 ---
 
-## 📖 Manual de Instruções
+## 🤝 Contribuindo
+Sinta-se livre para abrir **Issues** ou enviar **Pull Requests**. Consulte o [CONTRIBUTING.md](CONTRIBUTING.md) para mais detalhes.
 
-### 1. Adicionando Passos
-*   **Manual**: Digite as coordenadas X e Y e o tempo de Delay (espera após a ação).
-*   **Captura (Recomendado)**:
-    1.  Clique em **`Capturar (3s)`**.
-    2.  Posicione o mouse no local desejado e espere 3 segundos.
-    3.  As coordenadas serão preenchidas automaticamente.
-*   **Tipos de Ação**:
-    *   **Clique Esquerdo / Direito**: Clica com o mouse. (Opção **Duplo Clique** disponível).
-    *   **Digitar Texto**: Digita uma frase ou conteúdo de um arquivo `.txt` linha por linha.
-    *   **Pressionar Enter**: Move, clica para focar e pressiona a tecla `Enter`.
-    *   **Scroll**: Realiza rolagem da página na posição alvo. (Positivo = Cima, Negativo = Baixo).
-
-### 2. Gerenciando a Lista
-*   **Editar**: Dê **Duplo Clique** no texto do passo na lista para alterar valores (Posição, Delay, Scroll, etc).
-*   **Reordenar**: Use as setas **▲** e **▼** para mudar a ordem dos passos.
-*   **Remover**: Clique no **`X`** vermelho para apagar.
-*   **Marcadores**: Ative `Marcadores` para ver pontos visuais na tela. Você pode arrastá-los com o mouse para ajustar a posição fina.
-
-### 3. Fila de Execução e Controle
-*   **Loops**: Defina quantas vezes repetir a sequência ou marque `Loop Infinito`.
-*   **Confirmar Loops**: Se marcado, o programa pausa e pede confirmação do usuário entre cada repetição.
-*   **Iniciar**: Clique em **`Executar Sequência`**.
-*   **PAUSAR (F8)**: Pressione **F8** para pausar. A borda da janela ficará LARANJA. Pressione F8 novamente para retomar.
-*   **PARAR (F9)**: Pressione **F9** para abortar a execução imediatamente (Emergência).
-
-### 4. Arquivos e Dados
-*   **Salvar JSON**: Salve sua rotina atual para usar depois.
-*   **Carregar JSON**: Carregue uma rotina salva anteriormente.
-*   **Carregar Dados (.txt)**: Carregue uma lista de textos para usar na ação "Digitar Texto" (selecione a opção 'Usar Arq.').
+## 📄 Licença
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
