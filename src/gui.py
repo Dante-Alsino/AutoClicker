@@ -332,6 +332,7 @@ class AutoClickerApp(ctk.CTk):
         self.text_opts_frame.pack_forget()
         self.chk_double_click.pack_forget()
         self.scroll_frame.pack_forget()
+        self.key_frame.pack_forget()
 
         if choice == "Digitar Texto":
             self.entry_text.pack(side="left", padx=5)
