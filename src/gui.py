@@ -12,7 +12,7 @@ from tkinter import filedialog
 
 try:
     from .automation import AutomationEngine, ClickStep
-    from .widgets import DraggableMarker
+    from .widgets import DraggableMarker, ProgressOverlay
     from .constants import *
 except ImportError:
     if __name__ == "__main__":
@@ -80,6 +80,7 @@ class AutoClickerApp(ctk.CTk):
         self.engine = AutomationEngine()
         self.markers = []
         self.markers_visible = False
+        self.osd_overlay = None
         self.appearance_mode = "Dark" # Estado atual do tema
         
         # Filas para thread safety
@@ -170,10 +171,14 @@ class AutoClickerApp(ctk.CTk):
         self.lbl_scroll = ctk.CTkLabel(self.scroll_frame, text="Qtd:")
         self.lbl_scroll.pack(side="left", padx=2)
         self.entry_scroll = ctk.CTkEntry(self.scroll_frame, width=60)
-        self.entry_scroll.insert(0, "100")
+        self.entry_scroll.insert(0, "500")
         self.entry_scroll.pack(side="left", padx=2)
-        self.lbl_scroll_hint = ctk.CTkLabel(self.scroll_frame, text="(Pos=Cima, Neg=Baixo)", text_color="gray", font=("Arial", 10))
-        self.lbl_scroll_hint.pack(side="left", padx=5)
+        
+        self.scroll_dir_var = ctk.StringVar(value="baixo")
+        self.rad_scroll_up = ctk.CTkRadioButton(self.scroll_frame, text="Cima", variable=self.scroll_dir_var, value="cima", width=50)
+        self.rad_scroll_up.pack(side="left", padx=5)
+        self.rad_scroll_down = ctk.CTkRadioButton(self.scroll_frame, text="Baixo", variable=self.scroll_dir_var, value="baixo", width=50)
+        self.rad_scroll_down.pack(side="left", padx=5)
 
         # Key Capture (Inicialmente oculto)
         self.key_frame = ctk.CTkFrame(self.input_box, fg_color="transparent")
@@ -221,6 +226,9 @@ class AutoClickerApp(ctk.CTk):
 
         self.chk_markers = ctk.CTkCheckBox(self.op_box, text="Marcadores", command=self.toggle_markers)
         self.chk_markers.pack(side="right", padx=5)
+
+        self.chk_osd = ctk.CTkCheckBox(self.op_box, text="OSD na Tela")
+        self.chk_osd.pack(side="right", padx=5)
 
     def _build_list_area(self):
         # Lista de Passos
@@ -445,10 +453,18 @@ class AutoClickerApp(ctk.CTk):
         
         # Opção de scroll no editor
         if step.action_type == 'scroll':
-            ctk.CTkLabel(dialog, text="Scroll (+Cima/-Baixo):").pack(pady=5)
-            entry_scroll_edit = ctk.CTkEntry(dialog)
-            entry_scroll_edit.insert(0, str(step.scroll_amount))
-            entry_scroll_edit.pack(pady=5)
+            scroll_dir_edit_var = ctk.StringVar(value="cima" if step.scroll_amount > 0 else "baixo")
+            
+            scroll_edit_frame = ctk.CTkFrame(dialog, fg_color="transparent")
+            scroll_edit_frame.pack(pady=5)
+            
+            ctk.CTkLabel(scroll_edit_frame, text="Qtd Scroll:").pack(side="left", padx=2)
+            entry_scroll_edit = ctk.CTkEntry(scroll_edit_frame, width=60)
+            entry_scroll_edit.insert(0, str(abs(step.scroll_amount)))
+            entry_scroll_edit.pack(side="left", padx=2)
+            
+            ctk.CTkRadioButton(scroll_edit_frame, text="Cima", variable=scroll_dir_edit_var, value="cima", width=50).pack(side="left", padx=5)
+            ctk.CTkRadioButton(scroll_edit_frame, text="Baixo", variable=scroll_dir_edit_var, value="baixo", width=50).pack(side="left", padx=5)
 
         def save():
             try:
@@ -458,7 +474,8 @@ class AutoClickerApp(ctk.CTk):
                 step.double_click = bool(chk_double.get())
                 
                 if step.action_type == 'scroll':
-                    step.scroll_amount = int(entry_scroll_edit.get())
+                    amount = abs(int(entry_scroll_edit.get()))
+                    step.scroll_amount = amount if scroll_dir_edit_var.get() == "cima" else -amount
 
                 self.engine.update_step(index, step)
                 self._refresh_list()
@@ -568,7 +585,8 @@ class AutoClickerApp(ctk.CTk):
             elif action_choice == "Scroll":
                 action_type = "scroll"
                 try:
-                    scroll_amount = int(self.entry_scroll.get())
+                    amount_raw = abs(int(self.entry_scroll.get()))
+                    scroll_amount = amount_raw if self.scroll_dir_var.get() == "cima" else -amount_raw
                 except ValueError:
                      self.lbl_status.configure(text="Erro: Valor de scroll inválido!", text_color="red")
                      return
@@ -680,6 +698,21 @@ class AutoClickerApp(ctk.CTk):
                 self.step_frames[index].configure(fg_color=("gray75", "gray25"))
             except:
                 pass
+                
+            if hasattr(self, 'osd_overlay') and self.osd_overlay and self.osd_overlay.winfo_exists():
+                try:
+                    total_loops = self.entry_loops.get() if not self.chk_infinite.get() else "Inf"
+                    loop_text = f"Loop: {self.engine.current_loop} / {total_loops}"
+                    
+                    step_obj = self.engine.steps[index]
+                    step_desc = str(step_obj)
+                    if len(step_desc) > 42:
+                        step_desc = step_desc[:40] + "..."
+                    step_text = f"Passo {index+1}: {step_desc}"
+                    
+                    self.osd_overlay.update_info(loop_text, step_text)
+                except Exception as e:
+                    print(f"Erro ao atualizar OSD: {e}")
 
     def remove_step_at(self, index):
         self.engine.remove_step(index)
@@ -703,13 +736,24 @@ class AutoClickerApp(ctk.CTk):
             
         self.lbl_status.configure(text="Executando...", text_color="white")
         self.btn_execute.configure(state="disabled")
+        
+        if hasattr(self, 'chk_osd') and self.chk_osd.get():
+            try:
+                self.osd_overlay = ProgressOverlay(self)
+            except Exception as e:
+                print(f"Erro ao iniciar OSD: {e}")
+                
+        self.iconify()
         threading.Thread(target=self._run_engine, args=(loops, infinite, confirm_loops), daemon=True).start()
 
     def _handle_confirmation_request(self, event):
         """Executa na thread principal (GUI) para mostrar o popup."""
         try:
             loop_num = self.confirm_request_queue.get_nowait()
+            self.deiconify()
             result = messagebox.askyesno("Confirmar Loop", f"Loop {loop_num-1} finalizado.\nIniciar Loop {loop_num}?")
+            if result:
+                self.iconify()
             self.confirm_response_queue.put(result)
         except queue.Empty:
             pass
@@ -734,8 +778,16 @@ class AutoClickerApp(ctk.CTk):
         self.after(0, self._on_execution_finished)
 
     def _on_execution_finished(self):
+        self.deiconify()
         self.lbl_status.configure(text="Execução finalizada.")
         self.btn_execute.configure(state="normal")
+        
+        if hasattr(self, 'osd_overlay') and self.osd_overlay:
+            try:
+                self.osd_overlay.destroy()
+            except:
+                pass
+            self.osd_overlay = None
 
     def stop_execution(self):
         if self.engine.is_running:

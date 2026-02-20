@@ -53,6 +53,7 @@ class AutomationEngine:
         self.is_paused = False
         self.logger = logging.getLogger(__name__)
         self.data_lines: List[str] = []
+        self.current_loop = 0
 
     def load_data_file(self, filepath: str) -> int:
         """
@@ -210,11 +211,11 @@ class AutomationEngine:
         
         self.is_running = True
         
-        current_loop = 0
+        self.current_loop = 0
         
         try:
             while self.is_running:
-                if not infinite and current_loop >= loops:
+                if not infinite and self.current_loop >= loops:
                     break
                 
                 # Pausa
@@ -224,17 +225,17 @@ class AutomationEngine:
                          on_step_callback(-2) # -2 = Código para status PAUSADO (simbolico)
 
                 # Confirmação entre loops (exceto o primeiro)
-                if current_loop > 0 and confirm_between_loops and confirm_callback:
+                if self.current_loop > 0 and confirm_between_loops and confirm_callback:
                     if on_step_callback: on_step_callback(-3) # -3 = WAITING/CONFIRM
                     self.logger.info("Aguardando confirmação do usuário para próximo loop...")
-                    should_continue = confirm_callback(current_loop + 1)
+                    should_continue = confirm_callback(self.current_loop + 1)
                     if not should_continue:
                         self.logger.info("Usuário cancelou no diálogo de confirmação.")
                         break
 
-                current_loop += 1
-                print(f"--- Loop {current_loop} ---")
-                self.logger.info(f"Iniciando Loop {current_loop}")
+                self.current_loop += 1
+                print(f"--- Loop {self.current_loop} ---")
+                self.logger.info(f"Iniciando Loop {self.current_loop}")
 
                 for i, step in enumerate(self.steps):
                     if not self.is_running:
@@ -256,7 +257,7 @@ class AutomationEngine:
                     if step.action_type == 'type' and step.use_data_file:
                         if self.data_lines:
                             # Usa índice do loop (0-based) mod len(lines) para ciclar se acabar
-                            data_idx = (current_loop - 1) % len(self.data_lines)
+                            data_idx = (self.current_loop - 1) % len(self.data_lines)
                             text_to_type = self.data_lines[data_idx]
                             self.logger.info(f"Usando dados da linha {data_idx+1}: '{text_to_type}'")
                         else:
