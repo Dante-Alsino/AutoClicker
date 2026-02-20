@@ -284,51 +284,69 @@ class AutoClickerApp(ctk.CTk):
         """Abre janela com instruções."""
         help_window = ctk.CTkToplevel(self)
         help_window.title("Como funciona")
-        help_window.geometry("500x400")
+        help_window.geometry("600x520")
         help_window.attributes("-topmost", True)
         
-        textbox = ctk.CTkTextbox(help_window, width=480, height=380)
-        textbox.pack(padx=10, pady=10)
+        textbox = ctk.CTkTextbox(help_window, width=580, height=500, font=("Arial", 13), wrap="word")
+        textbox.pack(expand=True, fill="both", padx=10, pady=10)
         
         help_text = """MANUAL DO AUTOCLICKER
 
-1. ADICIONANDO AÇÕES
---------------------
-   - Coordenadas (X, Y): Digite manualmente ou use o botão "Capturar (3s)".
-   - Capturar: Clique, leve o mouse ao alvo e espere 3 segundos.
-    - Ação: Escolha entre Clique (Esq/Dir), Digitar Texto, Pressionar Enter ou Scroll.
-    - Duplo Clique: Marque a caixa para realizar dois cliques rápidos.
-    - Scroll: Defina a quantidade (ex: 100). Positivo sobe, negativo desce.
-    - Pressionar Enter: Move o mouse, clica e pressiona Enter.
-    - Adicionar: Clique em "Adicionar Passo" para inserir na lista.
+1. ADICIONANDO E PREPARANDO AÇÕES
+---------------------------------
 
-2. GERENCIANDO A LISTA
-----------------------
-   - Reordenar: Use as setas (▲/▼) para mover passos para cima ou baixo.
-   - Editar: Dê DUPLO CLIQUE em qualquer item da lista para alterar valores.
-   - Excluir: Clique no botão (X) vermelho.
-   - Marcadores: Ative a caixa "Marcadores" para ver pontos visuais na tela.
+ - Coordenadas (X, Y): Insira os valores manualmente ou utilize o botão "Capturar (3s)".
+   Nota: Ao acionar a captura, o sistema aguarda 3 segundos antes de registrar a posição atual do ponteiro do mouse na tela.
 
-3. DIGITAÇÃO DE TEXTO
----------------------
-   - Texto Simples: Digite o texto no campo e adicione o passo.
-   - Usar Arquivo (.txt): Marque "Usar Arq." e carregue um arquivo .txt.
-     Cada vez que o passo rodar, ele pegará a próxima linha do arquivo.
-   - Limpar Campo: Marque "Limpar" para apagar o conteúdo atual antes de digitar (Ctrl+A + Del).
+ - Ação Principal: Selecione entre Clique (Esquerdo/Direito), Digitação de Texto Padrão, Pressionar Enter, Scroll ou Captura de Atalho de Teclado.
 
-4. EXECUÇÃO E CONTROLE
-----------------------
-   - Iniciar: Clique em "Executar Sequência".
-   - PAUSAR (F8): Pressione F8 para pausar. A borda fica Laranja.
-   - RETOMAR (F8): Pressione F8 novamente para continuar.
-   - PARAR (F9): Pressione F9 para abortar imediatamente (Emergência).
-   - Loops: Defina a quantidade ou marque "Loop Infinito".
-   - Confirmar: Se marcado, pede permissão para iniciar cada novo loop.
+ - Ação de Scroll: Otimizada para maior precisão vertical. Insira a magnitude desejada e marque explicitamente a direção (Cima ou Baixo) utilizando as opções disponíveis.
 
-5. OUTROS
----------
-   - Salvar/Carregar: Salve suas rotinas em JSON para não perder trabalho.
-   - Tema: Alterne entre modo Claro e Escuro no botão inferior.
+ - Aviso de Coordenadas: Tentativas de adicionar coordenadas além dos limites do monitor principal gerarão um aviso para evitar falhas. Ao confirmar a intenção uma vez, o aviso não será repetido para eventos similares durante a sessão ativa.
+
+
+2. GERENCIAMENTO DA ROTINA (LISTA DE PASSOS)
+--------------------------------------------
+
+ - Reordenação: Utilize as setas direcionais (▲/▼) localizadas em cada etapa para alterar a ordem de execução.
+
+ - Edição Rápida: Um duplo-clique sobre a descrição de uma etapa abrirá uma janela para alteração instantânea de seus parâmetros (Delay, Coordenadas, etc).
+
+ - Marcadores de Tela: Ao ativar a opção "Marcadores", pontos visuais representarão seus cliques. Para redimensionar a automação, segure o clique sobre o marcador por 1 segundo e arraste-o para a nova coordenada. O sistema atualizará a lista automaticamente.
+
+
+3. DIGITAÇÃO AVANÇADA DE TEXTO
+------------------------------
+
+ - Múltiplos Textos Dinâmicos: Para usar listas (como formulários ou envio de senhas em massa), crie um arquivo textual (.txt), utilize o botão "Carregar Dados" e marque a opção "Usar Arq.". Cada ciclo (loop) de execução retirará sequencialmente a próxima linha do documento importado.
+
+ - Limpeza Prévia: Marcar a caixa "Limpar" simula o atalho global de sistema (Ctrl+A seguido de Delete) antes de iniciar a injeção do seu texto focado.
+
+
+4. RECURSOS EXTRAS E ACOMPANHAMENTO
+-----------------------------------
+
+ - Auto-Minimize durante a Execução: Ao disparar "Executar Sequência", a janela principal minimiza autonomamente para liberar sua área de trabalho para a rotina. O aplicativo será restaurado mediante conclusão ou necessidades de interação do usuário (como confirmações).
+
+ - Monitor Flutuante: Uma interface semitransparente ("OSD") ativável, alocada no quadrante superior direito do monitor principal. Ela reporta o progresso da ferramenta em tempo real (Qual Loop e qual Passo estão em cena). Notavelmente construída para ser "Click-Through" (vazamento de input), nenhum de seus cliques manuais ou mecânicos serão retidos por ela.
+
+
+5. CONTROLES DURANTE EXECUÇÃO
+-----------------------------
+
+ - [F8] PAUSAR / RETOMAR a rotina a qualquer momento. Um destacamento visual indicará a intercepção.
+
+ - [F9] ABORTO DE EMERGÊNCIA (Parada imediata de todas as ações).
+
+ - Nota sobre Teclados de Notebook: Se as teclas F8 e F9 não funcionarem de imediato, pode ser necessário pressionar e segurar a tecla "FN" (Function) no seu teclado junto com o F8 ou F9.
+
+
+6. SALVAMENTO DO PROJETO
+------------------------
+
+ - Exporte suas configurações elaboradas via arquivo binário em formato JSON (botão "Salvar JSON").
+
+ - Em execuções futuras, opere o botão de carregamento do protocolo JSON para restaurar imediatamente o estado e os itens listados sem necessidade de reconfiguração.
 """
         textbox.insert("0.0", help_text)
         textbox.configure(state="disabled")
@@ -398,14 +416,25 @@ class AutoClickerApp(ctk.CTk):
         if status_code == -2: # PAUSED
             self.configure(fg_color=COLOR_PAUSED)
             self.lbl_status.configure(text="PAUSADO (Pressione F8 para continuar)", text_color="black")
+            if hasattr(self, 'osd_overlay') and self.osd_overlay and self.osd_overlay.winfo_exists():
+                self.osd_overlay.set_paused(True)
         elif status_code == -3: # WAITING
             self.configure(fg_color=COLOR_WAITING)
+            self.lbl_status.configure(text="Aguardando confirmação...", text_color="white")
+            if hasattr(self, 'osd_overlay') and self.osd_overlay and self.osd_overlay.winfo_exists():
+                self.osd_overlay.set_paused(False)
         else: # NORMAL (Reseta para cor do tema)
             # Hack para resetar cor de fundo do CTK (usando None ou re-setando mode as vezes não limpa borders)
             # Vamos apenas resetar para o padrão cinza escuro/claro do CTK se possível, mas CTK não expõe fácil
             # Alternativa: setar para transparent ou cor padrão manual
             bg = "gray10" if self.appearance_mode == "Dark" else "gray90"
             self.configure(fg_color=bg)
+            if self.engine.is_running:
+                self.lbl_status.configure(text="Executando...", text_color="white")
+            else:
+                self.lbl_status.configure(text_color="white")
+            if hasattr(self, 'osd_overlay') and self.osd_overlay and self.osd_overlay.winfo_exists():
+                self.osd_overlay.set_paused(False)
 
     def move_step_up(self, index):
         if index > 0:
@@ -426,7 +455,7 @@ class AutoClickerApp(ctk.CTk):
         # Cria Janela TopLevel
         dialog = ctk.CTkToplevel(self)
         dialog.title(f"Editar Passo {index+1}")
-        dialog.geometry("300x250")
+        dialog.geometry("300x360")
         dialog.attributes("-topmost", True)
         
         ctk.CTkLabel(dialog, text="X:").pack(pady=5)

@@ -132,3 +132,13 @@ class ProgressOverlay(tk.Toplevel):
         self.lbl_loop.configure(text=loop_text)
         self.lbl_step.configure(text=step_text)
         self.update()
+
+    def set_paused(self, is_paused: bool):
+        if is_paused:
+            self.frame.configure(border_color="#FF8C00", border_width=2)
+            self.lbl_step.configure(text="[ PAUSADO - Pressione F8 para Retomar ]", text_color="#FF8C00")
+        else:
+            self.frame.configure(border_color="gray30", border_width=1)
+            self.lbl_step.configure(text_color="gray80")
+            # Text will be naturally updated in the next loop by update_info
+        self.update()
