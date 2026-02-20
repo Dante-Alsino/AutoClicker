@@ -82,6 +82,7 @@ class AutoClickerApp(ctk.CTk):
         self.markers_visible = False
         self.osd_overlay = None
         self.appearance_mode = "Dark" # Estado atual do tema
+        self.ignore_bounds_warning = False # Supressão de alerta de coordenadas suspeitas
         
         # Filas para thread safety
         self.confirm_request_queue = queue.Queue()
@@ -227,7 +228,7 @@ class AutoClickerApp(ctk.CTk):
         self.chk_markers = ctk.CTkCheckBox(self.op_box, text="Marcadores", command=self.toggle_markers)
         self.chk_markers.pack(side="right", padx=5)
 
-        self.chk_osd = ctk.CTkCheckBox(self.op_box, text="OSD na Tela")
+        self.chk_osd = ctk.CTkCheckBox(self.op_box, text="Monitor Flutuante")
         self.chk_osd.pack(side="right", padx=5)
 
     def _build_list_area(self):
@@ -547,9 +548,12 @@ class AutoClickerApp(ctk.CTk):
             x = int(x_str)
             y = int(y_str)
             
-            if not (0 <= x <= screen_width and 0 <= y <= screen_height):
-                 if not messagebox.askyesno("Coordenadas Suspeitas", f"As coordenadas ({x}, {y}) parecem estar fora da tela principal ({screen_width}x{screen_height}).\nDeseja adicionar mesmo assim?"):
-                     return
+            if not self.ignore_bounds_warning:
+                if not (0 <= x <= screen_width and 0 <= y <= screen_height):
+                    if not messagebox.askyesno("Coordenadas Suspeitas", f"As coordenadas ({x}, {y}) parecem estar fora da tela principal ({screen_width}x{screen_height}).\nDeseja adicionar mesmo assim?"):
+                        return
+                    else:
+                        self.ignore_bounds_warning = True
 
             delay = float(delay_str)
             action_choice = self.opt_action.get()
